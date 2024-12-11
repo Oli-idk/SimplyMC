@@ -61,7 +61,7 @@ export const v3formats = [
     bold: '<b>$t</b>',
     italic: '<i>$t</i>',
     underline: '<u>$t</u>',
-    strikethrough: '<s>$t</s>',
+    strikethrough: '<st>$t</st>',
   },
   {
     color: '§x§$1§$2§$3§$4§$5§$6$f$c',
