@@ -17,7 +17,7 @@ export default component$(() => {
             'Infrastructure',
             'Platform Development',
             // 'Loan Payments',
-            // 'Client Reimbursements',
+            'Client Reimbursements',
             'Hosting Revenue',
             'Ad Revenue',
             // 'Licensing Fees',
@@ -27,11 +27,11 @@ export default component$(() => {
             // Outer Ring (EXPENDITURES)
             backgroundColor: [
               'rgba(255, 0, 0, 0.2)', // EU Hosting Expenses
-              'rgba(255, 60, 0, 0.2)', // US Hosting Expenses
-              'rgba(255, 120, 0, 0.2)', // Infra
-              'rgba(255, 180, 0, 0.2)', // Dev
+              'rgba(255, 50, 0, 0.2)', // US Hosting Expenses
+              'rgba(255, 100, 0, 0.2)', // Infra
+              'rgba(255, 150, 0, 0.2)', // Dev
               // 'rgba(255, 160, 0, 1)', // loan payments
-              // 'rgba(255, 200, 0, 1)', // client reimbursements
+              'rgba(255, 200, 0, 0.2)', // client reimbursements
               'rgba(0, 200, 0, 0.2)', // hosting revenue
               'rgba(0, 200, 120, 0.2)', // ad revenue
               // 'rgba(0, 210, 100, 1)',
@@ -39,28 +39,28 @@ export default component$(() => {
             ],
             borderColor: [
               'rgba(255, 0, 0, 1)', // EU Hosting Expenses
-              'rgba(255, 60, 0, 1)', // US Hosting Expenses
-              'rgba(255, 120, 0, 1)', // Infra
-              'rgba(255, 200, 0, 1)', // Dev
+              'rgba(255, 50, 0, 1)', // US Hosting Expenses
+              'rgba(255, 100, 0, 1)', // Infra
+              'rgba(255, 150, 0, 1)', // Dev
               // 'rgba(255, 160, 0, 1)', // loan payments
-              // 'rgba(255, 200, 0, 1)', // client reimbursements
+              'rgba(255, 200, 0, 1)', // client reimbursements
               'rgba(0, 200, 0, 1)', // hosting revenue
               'rgba(0, 200, 120, 1)', // ad revenue
               // 'rgba(0, 210, 100, 1)',
               // 'rgba(0, 215, 150, 1)',
             ],
             borderWidth: 1,
-            data: [1020.81, 1997.07, 224.15, 213.16, null, null],
+            data: [1020.81, 1997.07, 224.15, 213.16, 1176.82, null, null],
           },
           {
             // Inner Ring (REVENUE)
             backgroundColor: [
               'rgba(255, 0, 0, 0.2)', // EU Hosting Expenses
-              'rgba(255, 60, 0, 0.2)', // US Hosting Expenses
-              'rgba(255, 120, 0, 0.2)', // Infra
-              'rgba(255, 180, 0, 0.2)', // Dev
+              'rgba(255, 50, 0, 0.2)', // US Hosting Expenses
+              'rgba(255, 100, 0, 0.2)', // Infra
+              'rgba(255, 150, 0, 0.2)', // Dev
               // 'rgba(255, 160, 0, 1)', // loan payments
-              // 'rgba(255, 200, 0, 1)', // client reimbursements
+              'rgba(255, 200, 0, 0.2)', // client reimbursements
               'rgba(0, 200, 0, 0.2)', // hosting revenue
               'rgba(0, 200, 120, 0.2)', // ad revenue
               // 'rgba(0, 210, 100, 1)',
@@ -68,18 +68,18 @@ export default component$(() => {
             ],
             borderColor: [
               'rgba(255, 0, 0, 1)', // EU Hosting Expenses
-              'rgba(255, 60, 0, 1)', // US Hosting Expenses
-              'rgba(255, 120, 0, 1)', // Infra
-              'rgba(255, 200, 0, 1)', // Dev
+              'rgba(255, 50, 0, 1)', // US Hosting Expenses
+              'rgba(255, 100, 0, 1)', // Infra
+              'rgba(255, 150, 0, 1)', // Dev
               // 'rgba(255, 160, 0, 1)', // loan payments
-              // 'rgba(255, 200, 0, 1)', // client reimbursements
+              'rgba(255, 200, 0, 1)', // client reimbursements
               'rgba(0, 200, 0, 1)', // hosting revenue
               'rgba(0, 200, 120, 1)', // ad revenue
               // 'rgba(0, 210, 100, 1)',
               // 'rgba(0, 215, 150, 1)',
             ],
             borderWidth: 1,
-            data: [null, null, null, null, 6385.68, 338.09],
+            data: [null, null, null, null, null, 6385.68, 338.09],
           }],
         },
         options: {
