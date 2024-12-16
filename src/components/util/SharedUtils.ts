@@ -14,7 +14,7 @@ export function getCookies(cookie: Cookie, preset: names, urlParams: URLSearchPa
   try {
     const cookieVal = cookie.get(preset)?.value;
     if (cookieVal) {
-      json = JSON.parse(cookieVal);
+      json = JSON.parse(decodeURIComponent(cookieVal));  // Decode the cookie value
     } else if (preset == 'rgb' || preset == 'animtab') {
       json = preset == 'rgb' ? deepclone(rgbDefaults) : deepclone(animTABDefaults);
     } else {
@@ -68,7 +68,7 @@ export function getCookies(cookie: Cookie, preset: names, urlParams: URLSearchPa
   return json;
 }
 
-export function setCookies(name: names, json: { [key: string]: any; }) {
+export function setCookies(name: names, json: { [key: string]: any }) {
   console.debug('cookie', name, JSON.stringify(json));
 
   const cookie: { [key: string]: string; } = {};
@@ -85,7 +85,7 @@ export function setCookies(name: names, json: { [key: string]: any; }) {
   });
 
   const existingCookie = cookie[name];
-  const encodedValue = JSON.stringify(cookieValue);
+  const encodedValue = encodeURIComponent(JSON.stringify(cookieValue));
   if (existingCookie === encodedValue) return;
   console.debug('cookie processed', name, encodedValue);
   document.cookie = `${name}=${encodedValue}; path=/`;

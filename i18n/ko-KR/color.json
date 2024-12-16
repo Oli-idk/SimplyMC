@@ -24,6 +24,6 @@
     "presets": "프리셋",
     "strikethrough": "취소선",
     "underline": "밑줄",
-    "url": "Export As URL"
+    "url": "Get URL"
   }
 }

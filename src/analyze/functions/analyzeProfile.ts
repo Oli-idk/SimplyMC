@@ -10,6 +10,11 @@ import config_server_properties from '~/analyze/configs/server.properties';
 import servers from '~/analyze/configs/servers';
 import config_spigot from '~/analyze/configs/spigot';
 
+const supportedPlatforms = [
+  'paper',
+  'bukkit',
+];
+
 export default async function analyzeProfile(id: string) {
   const url_raw = `https://spark.lucko.me/${id}?raw=1`;
 
@@ -25,10 +30,6 @@ export default async function analyzeProfile(id: string) {
   }
 
   const platform = sampler.metadata.platform.name;
-
-  let version = sampler.metadata.platform.version;
-
-  if (version.endsWith('(MC: 1.17)')) version = version.replace('(MC: 1.17)', '(MC: 1.17.0)');
 
   let server_properties: any, bukkit: any, spigot: any, paper: any, purpur: any;
 
@@ -65,8 +66,8 @@ export default async function analyzeProfile(id: string) {
   const fields: Field[] = [];
 
   // ghetto version check
-  const mcversion = version.split('(MC: ')[1];
-  if (mcversion == undefined) {
+  const mcversion = sampler.metadata.platform.minecraftVersion;
+  if (platform != undefined && supportedPlatforms.includes(platform.toLowerCase()) == false) {
     return [
       {
         name: '❌ Processing Error',
@@ -75,13 +76,12 @@ export default async function analyzeProfile(id: string) {
     ];
   }
   if (mcversion.split(')')[0] != latest) {
-    version = version.replace('git-', '').replace('MC: ', '');
-    fields.push({ name: '❌ Outdated', value: `You are using \`${version}\`. Update to \`${latest}\`.`, buttons: [{ text: 'Paper', url: 'https://papermc.io' }, { text: 'Pufferfish', url: 'https://ci.pufferfish.host/job/Pufferfish-1.19/' }, { text: 'Purpur', url: 'https://purpurmc.org' }] });
+    fields.push({ name: '❌ Outdated', value: `You are using \`${mcversion}\`. Update to \`${latest}\`.`, buttons: [{ text: 'Paper', url: 'https://papermc.io' }, { text: 'Pufferfish', url: 'https://ci.pufferfish.host/job/Pufferfish-1.19/' }, { text: 'Purpur', url: 'https://purpurmc.org' }] });
   }
-
+  const brand = sampler.metadata.platform.brand;
   if (PROFILE_CHECK.servers.servers) {
     PROFILE_CHECK.servers.servers.forEach((server: FieldOption) => {
-      if (version.includes(server.name)) fields.push(createField(server));
+      if (brand.includes(server.name)) fields.push(createField(server));
     });
   }
 

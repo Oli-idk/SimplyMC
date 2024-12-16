@@ -118,7 +118,13 @@ export default component$(() => {
             const gradient = new Gradient(colors, Math.ceil(store.text.length / store.colorlength));
 
             let hex = '';
-            const segments = [...store.text.matchAll(new RegExp(`.{1,${store.colorlength}}`, 'g'))];
+            const segments = [];
+            let index = 0;
+            const textArray = Array.from(store.text);
+            while (index < textArray.length) {
+              segments.push(textArray.slice(index, index + store.colorlength).join(''));
+              index += store.colorlength;
+            }
             return segments.map((segment, i) => {
               hex = convertToHex(gradient.next());
               return (
@@ -127,7 +133,7 @@ export default component$(() => {
                   'strikethrough': store.strikethrough,
                   'underline-strikethrough': store.underline && store.strikethrough,
                 }}>
-                  {segment[0].replace(/ /g, '\u00A0')}
+                  {segment.replace(/ /g, '\u00A0')}
                 </span>
               );
             });

@@ -10,7 +10,7 @@ export const plans = {
     id: 'eu-premium',
     groupId: 9,
     $PerGB: 2,
-    $PerGBReimbursed: 1.58,
+    $PerGBReimbursed: 1.48,
     ramAndId: {
       4: 8,
       6: 9,
@@ -31,7 +31,7 @@ export const plans = {
     id: 'us-premium',
     groupId: 7,
     $PerGB: 3,
-    $PerGBReimbursed: 1.95,
+    $PerGBReimbursed: 1.89,
     ramAndId: {
       4: 1,
       6: 2,
@@ -44,13 +44,13 @@ export const plans = {
       'Up to 80 GB NVMe Storage',
       'Free upgrade to US Premium+ after 6 months',
     ],
-    outOfStock: false,
+    outOfStock: true,
   },
   'US Premium+': {
     id: 'us-premium',
     groupId: 7,
     $PerGB: 3,
-    $PerGBReimbursed: 1.95,
+    $PerGBReimbursed: 1.89,
     ramAndId: {
       12: 4,
       16: 5,
@@ -62,7 +62,7 @@ export const plans = {
       '6 Logical Cores',
       'Unmetered* NVMe Storage',
     ],
-    outOfStock: false,
+    outOfStock: true,
   },
 };
 
@@ -298,11 +298,11 @@ export const head: DocumentHead = {
   meta: [
     {
       name: 'description',
-      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.58/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
+      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.48/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
     },
     {
       name: 'og:description',
-      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.58/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
+      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.48/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
     },
     {
       name: 'og:image',

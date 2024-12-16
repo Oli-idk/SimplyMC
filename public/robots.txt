@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /acornmc/
 Disallow: /terms/
 Disallow: https://rgb.birdlfop.com
-Disallow: /resources/rgb/*
+Disallow: /resources/rgb/?*

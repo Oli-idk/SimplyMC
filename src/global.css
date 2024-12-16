@@ -2,27 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fonts from https://github.com/IdreesInc/Monocraft */
+
 @font-face {
   font-family: MinecraftRegular;
-  src: url(/fonts/MinecraftRegular.otf);
+  src: url(/fonts/MinecraftRegular.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: MinecraftBold;
-  src: url(/fonts/MinecraftBold.otf);
+  src: url(/fonts/MinecraftBold.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: MinecraftItalic;
-  src: url(/fonts/MinecraftItalic.otf);
+  src: url(/fonts/MinecraftItalic.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: MinecraftBoldItalic;
-  src: url(/fonts/MinecraftBoldItalic.otf);
+  src: url(/fonts/MinecraftBoldItalic.ttf);
   font-display: swap;
 }
 

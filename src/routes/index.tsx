@@ -206,7 +206,7 @@ export default component$(() => {
             How do reimbursements work?
           </h2>
           <p class="text-gray-200 sm:text-lg">
-            As a nonprofit, Birdflop periodically reimburses clients based on excess profit. At the end of each reimbursement period, active clients receive a reimbursement for excess profit from their plan. These reimbursements are dependent on usage, maximally lowering prices at high service utilization. Last quarter, US clients received a 35% reimbursement and EU clients received a 21% reimbursement, effectively lowering prices to $1.95/GB RAM and $1.58/GB RAM for the US and EU, respectively. Not good enough? Find a competitor with similar specifications and inquire about our price matching.
+            As a nonprofit, Birdflop periodically reimburses clients based on excess profit. At the end of each reimbursement period, active clients receive a reimbursement for excess profit from their plan. These reimbursements are dependent on usage, maximally lowering prices at high service utilization. Last quarter, US clients received a 37% reimbursement and EU clients received a 26% reimbursement, effectively lowering prices to $1.89/GB RAM and $1.48/GB RAM for the US and EU, respectively. Not good enough? Find a competitor with similar specifications and inquire about our price matching.
           </p>
         </div>
       </div>
@@ -221,7 +221,7 @@ export default component$(() => {
             <div>
               <Chart />
               <p class="text-gray-400 text-center py-2 text-sm">
-                Plot shows revenue (inner ring) and expenditures (outer ring) for Q2 2024. Some numbers may be approximations, and categories may be simplified. US Hosting Expenses includes node acquisition and depreciation.
+                Plot shows revenue (inner ring) and expenditures (outer ring) for Q3 2024. Some numbers may be approximations, and categories may be simplified. US Hosting Expenses includes depreciation.
               </p>
             </div>
             <div class="flex flex-col gap-4">
@@ -322,11 +322,11 @@ export const head: DocumentHead = {
   meta: [
     {
       name: 'description',
-      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.58/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
+      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.48/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
     },
     {
       name: 'og:description',
-      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.58/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
+      content: 'Birdflop is a registered 501(c)(3) nonprofit Minecraft host aiming to provide affordable and accessible hosting and resources. Check out our plans starting at $1.48/GB RAM for some of the industry\'s fastest and cheapest servers, or use our free public resources.',
     },
     {
       name: 'og:image',
