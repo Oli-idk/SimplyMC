@@ -634,7 +634,7 @@ export default component$(() => {
                     {t('color.savedPresets@@Saved Presets')}
                   </Dropdown>
                   <div class="grid grid-cols-2 gap-2">
-                    <a class="lum-btn" href="presets">
+                    <a class="lum-btn" href="/resources/rgb/presets">
                       <GlobeOutline width="20" /> Browse
                     </a>
                     <button class="lum-btn" id="save" onClick$={() => {
