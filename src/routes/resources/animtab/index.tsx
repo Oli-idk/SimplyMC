@@ -619,6 +619,10 @@ export default component$(() => {
                         if (store[key] === undefined) return;
                         (store as any)[key] = json[key] ?? defaults[key];
                       });
+                      (Object.keys(animtabstore) as Array<keyof typeof animtabstore>).forEach(key => {
+                        if (animtabstore[key] === undefined) return;
+                        (animtabstore as any)[key] = json[key] ?? defaults[key];
+                      });
                       const alert = {
                         class: 'text-green-500',
                         text: 'color.importedPreset@@Successfully imported preset!',
