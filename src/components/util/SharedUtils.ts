@@ -28,6 +28,10 @@ export function getCookies(cookie: Cookie, preset: names, urlParams?: URLSearchP
     const params = Object.fromEntries([...urlParams.entries()]) as any;
     Object.keys(params).forEach(key => {
       try {
+        if ((preset == 'rgb' && !Object.keys(rgbDefaults).includes(key))
+        || (preset == 'animtab' && !Object.keys(animTABDefaults).includes(key))) {
+          delete params[key];
+        }
         if (key == 'format' || key == 'colors') params[key] = JSON.parse(params[key]);
         else if (params[key] === 'true' || params[key] === 'false') params[key] = params[key] === 'true';
         else if (!isNaN(Number(params[key]))) params[key] = Number(params[key]);
