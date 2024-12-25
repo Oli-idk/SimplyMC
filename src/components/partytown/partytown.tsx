@@ -1,8 +1,10 @@
 import type {
   PartytownConfig,
+//@ts-ignore
 } from '@builder.io/partytown/integration';
 import {
   partytownSnippet,
+//@ts-ignore
 } from '@builder.io/partytown/integration';
 
 /**
