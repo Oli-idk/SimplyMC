@@ -1,6 +1,6 @@
 import { component$, useStore } from '@builder.io/qwik';
 import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
-import { DropdownRaw } from '@luminescent/ui-qwik';
+import { DropdownRaw, Toggle } from '@luminescent/ui-qwik';
 import { CopyOutline, CubeOutline, SaveOutline, TrashBinOutline } from 'qwik-ionicons';
 import { inlineTranslate } from 'qwik-speak';
 import { Gradient } from '~/components/util/HexUtils';
@@ -20,11 +20,12 @@ export default component$(() => {
   const store = useStore({
     searchTerm: '',
     savedPresets: [] as Partial<typeof defaults>[],
+    showSaved: false,
     ...cookies,
   });
 
-  const filteredPresets = presets.filter((preset) =>
-    preset.name.toLowerCase().includes(store.searchTerm.toLowerCase()),
+  const filteredPresets = (store.showSaved && store.savedPresets.length > 0 ? store.savedPresets : presets).filter((preset) =>
+    preset.name!.toLowerCase().includes(store.searchTerm.toLowerCase()),
   );
 
   return (
@@ -33,15 +34,27 @@ export default component$(() => {
         <h1 class="font-bold text-gray-50 text-2xl md:text-3xl xl:text-4xl">
           {t('gradient.title@@RGBirdflop')} Presets
         </h1>
-        <h2 class="text-gray-50 my-1">
+        <h2 class="text-gray-50 mt-2">
           Welcome to the one-stop shop for presets!
         </h2>
-        <h2 class="text-gray-400 my-1">
-          Here you can find and save, copy, or directly use presets for use on RGBirdflop.
+        <h2 class="text-gray-400 mb-1">
+          Here you can find and save, copy, or directly use presets for use on RGBirdflop. Stay tuned for a way to submit your own presets!
         </h2>
-        <h2 class="text-gray-400 my-1">
-          Stay tuned for a way to submit your own presets!
-        </h2>
+        <div class={{
+          'opacity-50': store.savedPresets.length === 0,
+        }}>
+          <Toggle id="advanced" disabled={store.savedPresets.length === 0}
+            checked={store.showSaved && store.savedPresets.length > 0}
+            onChange$={(e, el) => store.showSaved = el.checked}
+            label={<p class="flex flex-col">
+              <span>
+                Show saved presets
+              </span>
+              <span class="text-xs text-gray-400">
+                Switches between showing all public presets and presets you have saved.
+              </span>
+            </p>} />
+        </div>
 
         <input
           class="lum-input w-full my-4"
@@ -67,13 +80,13 @@ export default component$(() => {
                       'text-2xl sm:text-3xl break-all max-w-7xl font-mc tracking-tight': true,
                     }}>
                       {(() => {
-                        const colors = sortColors(preset.colors).map((color) => ({ rgb: convertToRGB(color.hex), pos: color.pos }));
+                        const colors = sortColors(preset.colors ?? presets[0].colors).map((color) => ({ rgb: convertToRGB(color.hex), pos: color.pos }));
                         if (colors.length < 2) return preset.name;
 
-                        const gradient = new Gradient(colors, Math.ceil(preset.name.length));
+                        const gradient = new Gradient(colors, Math.ceil((preset.name ?? 'Untitled').length));
 
                         let hex = '';
-                        const segments = [...preset.name.matchAll(new RegExp('.{1,1}', 'g'))];
+                        const segments = [...(preset.name ?? 'Untitled').matchAll(new RegExp('.{1,1}', 'g'))];
                         return segments.map((segment, i) => {
                           hex = convertToHex(gradient.next());
                           return (

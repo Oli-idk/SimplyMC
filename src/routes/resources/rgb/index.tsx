@@ -2,10 +2,10 @@ import { $, component$, useStore, useTask$ } from '@builder.io/qwik';
 import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
 
 import { Gradient } from '~/components/util/HexUtils';
-import { defaults, loadPreset, v3formats } from '~/components/util/PresetUtils';
+import { defaults, loadPreset, v3formats, presets as presetlist } from '~/components/util/PresetUtils';
 import { convertToHex, convertToRGB, generateOutput, getBrightness, getRandomColor } from '~/components/util/RGBUtils';
 
-import { Add, BarChartOutline, ChevronDown, ChevronUp, ColorFillOutline, DiceOutline, GlobeOutline, LinkOutline, SaveOutline, SettingsOutline, ShareOutline, Text, TrashOutline } from 'qwik-ionicons';
+import { Add, BarChartOutline, ChevronDown, ChevronUp, ColorFillOutline, DiceOutline, DownloadOutline, GlobeOutline, LinkOutline, SaveOutline, SettingsOutline, ShareOutline, Text, TrashOutline } from 'qwik-ionicons';
 
 import { Dropdown, Toggle, NumberInput, ColorPicker } from '@luminescent/ui-qwik';
 import { inlineTranslate, useSpeak } from 'qwik-speak';
@@ -575,10 +575,32 @@ export default component$(() => {
                     }
                   } values={
                     cookies.presets.map((preset) => ({
-                      name: preset.name,
+                      name: <span class={{
+                        'break-all font-mc tracking-tight': true,
+                      }}>
+                        {(() => {
+                          const colors = sortColors(preset.colors ?? presetlist[0].colors).map((color) => ({ rgb: convertToRGB(color.hex), pos: color.pos }));
+                          if (colors.length < 2) return preset.name;
+
+                          const gradient = new Gradient(colors, Math.ceil((preset.name ?? 'Untitled').length));
+
+                          let hex = '';
+                          const segments = [...(preset.name ?? 'Untitled').matchAll(new RegExp('.{1,1}', 'g'))];
+                          return segments.map((segment, i) => {
+                            hex = convertToHex(gradient.next());
+                            return (
+                              <span key={`segment-${i}`} style={`color: #${hex};`}>
+                                {segment[0].replace(/ /g, '\u00A0')}
+                              </span>
+                            );
+                          });
+                        })()}
+                      </span>,
                       value: JSON.stringify(preset),
                     }))
-                  }>
+                  } display={<span class="flex gap-3 flex-1">
+                    <DownloadOutline width="20" /> Load saved preset
+                  </span>}>
                     {t('color.savedPresets@@Saved Presets')}
                   </Dropdown>
                   <div class="grid grid-cols-2 gap-2">
