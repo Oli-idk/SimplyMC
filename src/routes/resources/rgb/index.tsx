@@ -1,11 +1,11 @@
-import { $, component$, useStore, useTask$ } from '@builder.io/qwik';
+import { $, component$, useSignal, useStore, useTask$ } from '@builder.io/qwik';
 import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
 
 import { Gradient } from '~/components/util/HexUtils';
 import { defaults, loadPreset, v3formats, presets as presetlist } from '~/components/util/PresetUtils';
 import { convertToHex, convertToRGB, generateOutput, getBrightness, getRandomColor } from '~/components/util/RGBUtils';
 
-import { Add, BarChartOutline, ChevronDown, ChevronUp, ColorFillOutline, DiceOutline, DownloadOutline, GlobeOutline, LinkOutline, SaveOutline, SettingsOutline, ShareOutline, Text, TrashOutline } from 'qwik-ionicons';
+import { Add, BarChartOutline, ChevronDown, ChevronUp, CloseOutline, ColorFillOutline, DiceOutline, DownloadOutline, GlobeOutline, LinkOutline, SaveOutline, SettingsOutline, ShareOutline, Text, TrashOutline } from 'qwik-ionicons';
 
 import { Dropdown, Toggle, NumberInput, ColorPicker } from '@luminescent/ui-qwik';
 import { inlineTranslate, useSpeak } from 'qwik-speak';
@@ -32,7 +32,7 @@ export const useCookies = routeLoader$(async ({ cookie, url }) => {
   const presetCookies = await getCookies(cookie, 'presets') as { savedPresets: Partial<typeof defaults>[] };
   return {
     rgb: rgbCookies,
-    presets: presetCookies.savedPresets || [],
+    presets: presetCookies,
   };
 });
 
@@ -45,6 +45,9 @@ export default component$(() => {
     ...structuredClone(rgbDefaults),
     ...cookies.rgb,
   }, { deep: true });
+  const presetstore = useStore({
+    ...cookies.presets,
+  });
 
   const tmpstore: {
     opened: {
@@ -81,6 +84,8 @@ export default component$(() => {
     newColors[newIndex].pos = currentPos;
     store.colors = sortColors(newColors);
   });
+
+  const modalRef = useSignal<HTMLDialogElement>();
 
   useTask$(({ track }) => {
     if (isBrowser) setCookies('rgb', store);
@@ -574,7 +579,7 @@ export default component$(() => {
                       }, 2000);
                     }
                   } values={
-                    cookies.presets.map((preset) => ({
+                    presetstore.savedPresets.map((preset) => ({
                       name: <span class={{
                         'break-all font-mc tracking-tight': true,
                       }}>
@@ -608,22 +613,51 @@ export default component$(() => {
                       <GlobeOutline width="20" /> Browse
                     </a>
                     <button class="lum-btn" id="save" onClick$={() => {
-                      const preset: Partial<typeof defaults> = { ...store };
-                      (Object.keys(preset) as Array<keyof typeof defaults>).forEach(key => {
-                        if (key != 'version' && JSON.stringify(preset[key]) === JSON.stringify(defaults[key as keyof typeof defaults])) delete preset[key];
-                      });
-                      navigator.clipboard.writeText(JSON.stringify(preset));
-                      const alert = {
-                        class: 'text-green-500',
-                        text: 'color.exportedPreset@@Successfully exported preset to clipboard!',
-                      };
-                      tmpstore.alerts.push(alert);
-                      setTimeout(() => {
-                        tmpstore.alerts.splice(tmpstore.alerts.indexOf(alert), 1);
-                      }, 2000);
+                      modalRef.value?.showModal();
                     }}>
                       <SaveOutline width="20" /> {t('color.save@@Save')}
                     </button>
+                    <dialog ref={modalRef} class="lum-bg-gray-800/20 lum-pad-equal-2xl shadow-lg backdrop-blur-xl rounded-lg relative max-w-lg w-full transform transition-transform duration-300 ease-out">
+                      <div class="flex flex-col gap-3">
+                        <h3 class="text-gray-50 text-xl font-semibold mb-4">
+                          {t('color.savePreset@@Save Preset')}
+                        </h3>
+
+                        <input class="lum-input" id="presetname" placeholder={t('color.presetName@@Preset Name')} />
+
+                        <div class="flex gap-2 justify-end">
+                          <button class="lum-btn" onClick$={() => {
+                            modalRef.value?.close();
+                          }}>
+                            <CloseOutline width="20" /> {t('color.cancel@@Cancel')}
+                          </button>
+                          <button class="lum-btn lum-bg-green-900 hover:lum-bg-green-800" id="save" onClick$={() => {
+                            const presetnameinput = document.getElementById('presetname') as HTMLInputElement;
+                            const preset: Partial<typeof defaults> = {
+                              ...store,
+                              name: presetnameinput.value ?? 'Untitled',
+                            };
+                            (Object.keys(preset) as Array<keyof typeof defaults>).forEach(key => {
+                              if (key != 'version' && JSON.stringify(preset[key]) === JSON.stringify(defaults[key as keyof typeof defaults])) delete preset[key];
+                            });
+                            if (presetstore.savedPresets.find(p => JSON.stringify(p) === JSON.stringify(preset))) return;
+                            presetstore.savedPresets.push(preset);
+                            setCookies('presets', presetstore);
+                            modalRef.value?.close();
+                            const alert = {
+                              class: 'text-green-500',
+                              text: 'color.savedPreset@@Successfully saved preset!',
+                            };
+                            tmpstore.alerts.push(alert);
+                            setTimeout(() => {
+                              tmpstore.alerts.splice(tmpstore.alerts.indexOf(alert), 1);
+                            }, 2000);
+                          }}>
+                            <SaveOutline width="20" /> {t('color.save@@Save')}
+                          </button>
+                        </div>
+                      </div>
+                    </dialog>
                   </div>
                 </div>
                 <div class="flex flex-col gap-2">

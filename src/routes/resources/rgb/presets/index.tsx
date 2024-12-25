@@ -25,7 +25,7 @@ export default component$(() => {
   });
 
   const filteredPresets = (store.showSaved && store.savedPresets.length > 0 ? store.savedPresets : presets).filter((preset) =>
-    preset.name!.toLowerCase().includes(store.searchTerm.toLowerCase()),
+    (preset.name ?? 'Untitled').toLowerCase().includes(store.searchTerm.toLowerCase()),
   );
 
   return (
@@ -81,7 +81,7 @@ export default component$(() => {
                     }}>
                       {(() => {
                         const colors = sortColors(preset.colors ?? presets[0].colors).map((color) => ({ rgb: convertToRGB(color.hex), pos: color.pos }));
-                        if (colors.length < 2) return preset.name;
+                        if (colors.length < 2) return preset.name ?? 'Untitled';
 
                         const gradient = new Gradient(colors, Math.ceil((preset.name ?? 'Untitled').length));
 
@@ -97,10 +97,6 @@ export default component$(() => {
                         });
                       })()}
                     </h3>
-                    <p class="flex items-center gap-1 text-gray-400">
-                      <img src="/branding/icon.png" alt="Birdflop" class="w-8 h-8 rounded-full" />
-                      Birdflop
-                    </p>
                   </div>
                 </div>
                 <div class="hidden sm:flex gap-2 mt-2">
