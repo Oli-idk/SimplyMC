@@ -6,7 +6,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { languages } from "./src/speak-config";
 import { partytownVite } from "@builder.io/partytown/utils";
 import { join } from "path";
-
 export default defineConfig(() => {
     return {
         plugins: [
@@ -29,33 +28,5 @@ export default defineConfig(() => {
         ssr: {
             external: ['@prisma/client/edge'],
         },
-        resolve: {
-            alias: {
-                crypto: 'crypto-browserify',
-                stream: 'stream-browserify',
-                util: 'util',
-                // Add Node.js built-in polyfills
-                buffer: 'buffer',
-                events: 'events',
-                assert: 'assert',
-                path: 'path-browserify',
-                http: 'stream-http',
-                https: 'https-browserify',
-            }
-        },
-        optimizeDeps: {
-            include: ['crypto-browserify', 'buffer', 'events'],
-            esbuildOptions: {
-                target: 'esnext',
-                supported: {
-                    bigint: true
-                },
-            }
-        },
-        build: {
-            rollupOptions: {
-                external: ['@prisma/client/edge'],
-            }
-        }
     };
 });
