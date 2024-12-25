@@ -1,7 +1,7 @@
 import { $, component$, useStore, useTask$, useVisibleTask$ } from '@builder.io/qwik';
 import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
 
-import { defaults, loadPreset, presets, types, v3formats } from '~/components/util/PresetUtils';
+import { defaults, loadPreset, types, v3formats } from '~/components/util/PresetUtils';
 import { AnimationOutput, convertToRGB, getAnimFrames, getBrightness, getRandomColor } from '~/components/util/RGBUtils';
 
 import { Add, BarChartOutline, ChevronDown, ChevronUp, ColorFillOutline, DiceOutline, GlobeOutline, LinkOutline, SaveOutline, SettingsOutline, ShareOutline, Text, TrashOutline } from 'qwik-ionicons';
@@ -23,6 +23,7 @@ export const animTABDefaults = {
 export const useCookies = routeLoader$(async ({ cookie, url }) => {
   const animtabCookies = await getCookies(cookie, 'animtab', url.searchParams) as Partial<typeof animTABDefaults>;
   const rgbCookies = await getCookies(cookie, 'rgb', url.searchParams) as Partial<typeof rgbDefaults>;
+  const presetCookies = await getCookies(cookie, 'presets') as { savedPresets: Partial<typeof defaults>[] };
   if (!rgbCookies.customFormat) {
     delete rgbCookies.format;
     delete animtabCookies.outputFormat;
@@ -30,6 +31,7 @@ export const useCookies = routeLoader$(async ({ cookie, url }) => {
   return {
     animtab: animtabCookies,
     rgb: rgbCookies,
+    presets: presetCookies.savedPresets || [],
   };
 });
 
@@ -497,9 +499,6 @@ export default component$(() => {
                 <input class="lum-input" id="prefixsuffix" value={store.prefixsuffix} placeholder={'/nick $t'} onInput$={(e, el) => { store.prefixsuffix = el.value; }}/>
               </div>
             </div>
-            {tmpstore.alerts.map((alert, i) => (
-              <p key={`preset-alert${i}`} class={alert.class} dangerouslySetInnerHTML={t(alert.text)} />
-            ))}
             {
               store.customFormat && <>
                 <Dropdown id="format" value={store.customFormat ? 'custom' : JSON.stringify(store.format)} class={{ 'w-full': true }} onChange$={
@@ -628,9 +627,12 @@ export default component$(() => {
                         tmpstore.alerts.splice(tmpstore.alerts.indexOf(alert), 1);
                       }, 2000);
                     }
-                  } values={[
-                    { name: 'No presets', value: JSON.stringify({}) },
-                  ]} value={(Object.keys(presets) as Array<keyof typeof presets>).find((preset) => presets[preset].toString() == store.colors.toString())}>
+                  } values={
+                    cookies.presets.map((preset) => ({
+                      name: preset.name,
+                      value: JSON.stringify(preset),
+                    }))
+                  }>
                     {t('color.savedPresets@@Saved Presets')}
                   </Dropdown>
                   <div class="grid grid-cols-2 gap-2">

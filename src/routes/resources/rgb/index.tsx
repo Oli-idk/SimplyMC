@@ -2,7 +2,7 @@ import { $, component$, useStore, useTask$ } from '@builder.io/qwik';
 import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
 
 import { Gradient } from '~/components/util/HexUtils';
-import { defaults, loadPreset, presets, v3formats } from '~/components/util/PresetUtils';
+import { defaults, loadPreset, v3formats } from '~/components/util/PresetUtils';
 import { convertToHex, convertToRGB, generateOutput, getBrightness, getRandomColor } from '~/components/util/RGBUtils';
 
 import { Add, BarChartOutline, ChevronDown, ChevronUp, ColorFillOutline, DiceOutline, GlobeOutline, LinkOutline, SaveOutline, SettingsOutline, ShareOutline, Text, TrashOutline } from 'qwik-ionicons';
@@ -28,7 +28,12 @@ export const rgbDefaults = {
 };
 
 export const useCookies = routeLoader$(async ({ cookie, url }) => {
-  return await getCookies(cookie, 'rgb', url.searchParams);
+  const rgbCookies = await getCookies(cookie, 'rgb', url.searchParams) as typeof rgbDefaults;
+  const presetCookies = await getCookies(cookie, 'presets') as { savedPresets: Partial<typeof defaults>[] };
+  return {
+    rgb: rgbCookies,
+    presets: presetCookies.savedPresets || [],
+  };
 });
 
 export default component$(() => {
@@ -38,7 +43,7 @@ export default component$(() => {
   const cookies = useCookies().value;
   const store = useStore({
     ...structuredClone(rgbDefaults),
-    ...cookies,
+    ...cookies.rgb,
   }, { deep: true });
 
   const tmpstore: {
@@ -568,9 +573,12 @@ export default component$(() => {
                         tmpstore.alerts.splice(tmpstore.alerts.indexOf(alert), 1);
                       }, 2000);
                     }
-                  } values={[
-                    { name: 'No presets', value: JSON.stringify({}) },
-                  ]} value={(Object.keys(presets) as Array<keyof typeof presets>).find((preset) => presets[preset].toString() == store.colors.toString())}>
+                  } values={
+                    cookies.presets.map((preset) => ({
+                      name: preset.name,
+                      value: JSON.stringify(preset),
+                    }))
+                  }>
                     {t('color.savedPresets@@Saved Presets')}
                   </Dropdown>
                   <div class="grid grid-cols-2 gap-2">

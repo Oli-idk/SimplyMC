@@ -10,22 +10,22 @@ importers:
     devDependencies:
       '@anuragroy/tailwindcss-animate':
         specifier: ^1.0.6
-        version: 1.0.6(tailwindcss@3.4.16)
+        version: 1.0.6(tailwindcss@3.4.17)
       '@auth/prisma-adapter':
         specifier: ^2.7.4
-        version: 2.7.4(@prisma/client@6.0.1(prisma@6.0.1))
+        version: 2.7.4(@prisma/client@6.1.0(prisma@6.1.0))
       '@auth/qwik':
         specifier: 0.5.4
         version: 0.5.4
       '@builder.io/partytown':
-        specifier: ^0.10.2
-        version: 0.10.2
+        specifier: ^0.10.3
+        version: 0.10.3
       '@builder.io/qwik':
         specifier: 1.11.0
-        version: 1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
+        version: 1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
       '@builder.io/qwik-city':
         specifier: 1.11.0
-        version: 1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
+        version: 1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
       '@luminescent/ui':
         specifier: 1.3.1
         version: 1.3.1
@@ -34,13 +34,13 @@ importers:
         version: 1.3.1(@luminescent/ui@1.3.1)
       '@modular-forms/qwik':
         specifier: ^0.29.0
-        version: 0.29.0(@builder.io/qwik-city@1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(@builder.io/qwik@1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(typescript@5.7.2)
+        version: 0.29.0(@builder.io/qwik-city@1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(@builder.io/qwik@1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(typescript@5.7.2)
       '@prisma/client':
-        specifier: 6.0.1
-        version: 6.0.1(prisma@6.0.1)
+        specifier: 6.1.0
+        version: 6.1.0(prisma@6.1.0)
       '@prisma/extension-accelerate':
         specifier: ^1.2.1
-        version: 1.2.1(@prisma/client@6.0.1(prisma@6.0.1))
+        version: 1.2.1(@prisma/client@6.1.0(prisma@6.1.0))
       '@types/eslint':
         specifier: ^8.56.11
         version: 8.56.11
@@ -69,29 +69,29 @@ importers:
         specifier: ^8.4.49
         version: 8.4.49
       prisma:
-        specifier: ^6.0.1
-        version: 6.0.1
+        specifier: ^6.1.0
+        version: 6.1.0
       qwik-ionicons:
         specifier: ^1.0.5
         version: 1.0.5
       qwik-speak:
         specifier: ^0.23.0
-        version: 0.23.0(@builder.io/qwik@1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))
+        version: 0.23.0(@builder.io/qwik@1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))
       tailwindcss:
-        specifier: ^3.4.16
-        version: 3.4.16
+        specifier: ^3.4.17
+        version: 3.4.17
       typescript:
         specifier: 5.7.2
         version: 5.7.2
       undici:
-        specifier: ^7.1.1
-        version: 7.1.1
+        specifier: ^7.2.0
+        version: 7.2.0
       vite:
-        specifier: 6.0.3
-        version: 6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
+        specifier: 6.0.5
+        version: 6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: 5.1.4
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
       wrangler:
         specifier: latest
         version: 3.61.0
@@ -136,8 +136,8 @@ packages:
     resolution: {integrity: sha512-fbTXkEMOp+s/4wq0iZ6sZDrtLHNE3/BleMeWsSa+Rrv/QTsY2HSDjqvzSavT6lqcQWdb+Rdh4gRiDo2GsraGyg==}
     engines: {node: '>=18.17'}
 
-  '@builder.io/partytown@0.10.2':
-    resolution: {integrity: sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==}
+  '@builder.io/partytown@0.10.3':
+    resolution: {integrity: sha512-N2SWA3c5vEad3rgdAFM3zMb6uc7aXqibkgAz4ijvYzycgQXJ4dE5oH6fGFMXSQWj6ayVlLT1/CmpflYUJHfmQg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -695,8 +695,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@prisma/client@6.0.1':
-    resolution: {integrity: sha512-60w7kL6bUxz7M6Gs/V+OWMhwy94FshpngVmOY05TmGD0Lhk+Ac0ZgtjlL6Wll9TD4G03t4Sq1wZekNVy+Xdlbg==}
+  '@prisma/client@6.1.0':
+    resolution: {integrity: sha512-AbQYc5+EJKm1Ydfq3KxwcGiy7wIbm4/QbjCKWWoNROtvy7d6a3gmAGkKjK0iUCzh+rHV8xDhD5Cge8ke/kiy5Q==}
     engines: {node: '>=18.18'}
     peerDependencies:
       prisma: '*'
@@ -704,14 +704,14 @@ packages:
       prisma:
         optional: true
 
-  '@prisma/debug@6.0.1':
-    resolution: {integrity: sha512-jQylgSOf7ibTVxqBacnAlVGvek6fQxJIYCQOeX2KexsfypNzXjJQSS2o5s+Mjj2Np93iSOQUaw6TvPj8syhG4w==}
+  '@prisma/debug@6.1.0':
+    resolution: {integrity: sha512-0himsvcM4DGBTtvXkd2Tggv6sl2JyUYLzEGXXleFY+7Kp6rZeSS3hiTW9mwtUlXrwYbJP6pwlVNB7jYElrjWUg==}
 
-  '@prisma/engines-version@5.23.0-27.5dbef10bdbfb579e07d35cc85fb1518d357cb99e':
-    resolution: {integrity: sha512-JmIds0Q2/vsOmnuTJYxY4LE+sajqjYKhLtdOT6y4imojqv5d/aeVEfbBGC74t8Be1uSp0OP8lxIj2OqoKbLsfQ==}
+  '@prisma/engines-version@6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959':
+    resolution: {integrity: sha512-PdJqmYM2Fd8K0weOOtQThWylwjsDlTig+8Pcg47/jszMuLL9iLIaygC3cjWJLda69siRW4STlCTMSgOjZzvKPQ==}
 
-  '@prisma/engines@6.0.1':
-    resolution: {integrity: sha512-4hxzI+YQIR2uuDyVsDooFZGu5AtixbvM2psp+iayDZ4hRrAHo/YwgA17N23UWq7G6gRu18NvuNMb48qjP3DPQw==}
+  '@prisma/engines@6.1.0':
+    resolution: {integrity: sha512-GnYJbCiep3Vyr1P/415ReYrgJUjP79fBNc1wCo7NP6Eia0CzL2Ot9vK7Infczv3oK7JLrCcawOSAxFxNFsAERQ==}
 
   '@prisma/extension-accelerate@1.2.1':
     resolution: {integrity: sha512-QicnMeyqL226ilT3vvRsFAqPeIdqHGKR4c25CoK5zZ1tNIv8egfgpD1gCKqOGmfAz0pIKQnMuJU3eNg9KItC7A==}
@@ -719,11 +719,11 @@ packages:
     peerDependencies:
       '@prisma/client': '>=4.16.1'
 
-  '@prisma/fetch-engine@6.0.1':
-    resolution: {integrity: sha512-T36bWFVGeGYYSyYOj9d+O9G3sBC+pAyMC+jc45iSL63/Haq1GrYjQPgPMxrEj9m739taXrupoysRedQ+VyvM/Q==}
+  '@prisma/fetch-engine@6.1.0':
+    resolution: {integrity: sha512-asdFi7TvPlEZ8CzSZ/+Du5wZ27q6OJbRSXh+S8ISZguu+S9KtS/gP7NeXceZyb1Jv1SM1S5YfiCv+STDsG6rrg==}
 
-  '@prisma/get-platform@6.0.1':
-    resolution: {integrity: sha512-zspC9vlxAqx4E6epMPMLLBMED2VD8axDe8sPnquZ8GOsn6tiacWK0oxrGK4UAHYzYUVuMVUApJbdXB2dFpLhvg==}
+  '@prisma/get-platform@6.1.0':
+    resolution: {integrity: sha512-ia8bNjboBoHkmKGGaWtqtlgQOhCi7+f85aOkPJKgNwWvYrT6l78KgojLekE8zMhVk0R9lWcifV0Pf8l3/15V0Q==}
 
   '@rollup/pluginutils@5.1.0':
     resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
@@ -2061,8 +2061,8 @@ packages:
   printable-characters@1.0.42:
     resolution: {integrity: sha512-dKp+C4iXWK4vVYZmYSd0KBH5F/h1HoZRsbJ82AVKRO3PEo8L4lBS/vLwhVtpwwuYcoIsVY+1JYKR268yn480uQ==}
 
-  prisma@6.0.1:
-    resolution: {integrity: sha512-CaMNFHkf+DDq8zq3X/JJsQ4Koy7dyWwwtOKibkT/Am9j/tDxcfbg7+lB1Dzhx18G/+RQCMgjPYB61bhRqteNBQ==}
+  prisma@6.1.0:
+    resolution: {integrity: sha512-aFI3Yi+ApUxkwCJJwyQSwpyzUX7YX3ihzuHNHOyv4GJg3X5tQsmRaJEnZ+ZyfHpMtnyahhmXVfbTZ+lS8ZtfKw==}
     engines: {node: '>=18.18'}
     hasBin: true
 
@@ -2285,8 +2285,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tailwindcss@3.4.16:
-    resolution: {integrity: sha512-TI4Cyx7gDiZ6r44ewaJmt0o6BrMCT5aK5e0rmJ/G9Xq3w7CX/5VXl/zIPEJZFUK5VEqwByyhqNPycPlvcK4ZNw==}
+  tailwindcss@3.4.17:
+    resolution: {integrity: sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2374,8 +2374,8 @@ packages:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
     engines: {node: '>=14.0'}
 
-  undici@7.1.1:
-    resolution: {integrity: sha512-WZkQ6eH9f5ZT93gaIffsbUaDpBwjbpvmMbfaEhOnbdUneurTESeRxwPGwjI28mRFESH3W3e8Togijh37ptOQqA==}
+  undici@7.2.0:
+    resolution: {integrity: sha512-klt+0S55GBViA9nsq48/NSCo4YX5mjydjypxD7UmHh/brMu8h/Mhd/F7qAeoH2NOO8SDTk6kjnTFc4WpzmfYpQ==}
     engines: {node: '>=20.18.1'}
 
   unenv-nightly@1.10.0-1717606461.a117952:
@@ -2451,8 +2451,8 @@ packages:
       vite:
         optional: true
 
-  vite@6.0.3:
-    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
+  vite@6.0.5:
+    resolution: {integrity: sha512-akD5IAH/ID5imgue2DYhzsEwCi0/4VKY31uhMLEYJwPP4TiUp8pL5PIK+Wo7H8qT8JY9i+pVfPydcFPYD1EL7g==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2573,9 +2573,9 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@anuragroy/tailwindcss-animate@1.0.6(tailwindcss@3.4.16)':
+  '@anuragroy/tailwindcss-animate@1.0.6(tailwindcss@3.4.17)':
     dependencies:
-      tailwindcss: 3.4.16
+      tailwindcss: 3.4.17
 
   '@auth/core@0.37.4':
     dependencies:
@@ -2585,10 +2585,10 @@ snapshots:
       preact: 10.24.3
       preact-render-to-string: 6.5.11(preact@10.24.3)
 
-  '@auth/prisma-adapter@2.7.4(@prisma/client@6.0.1(prisma@6.0.1))':
+  '@auth/prisma-adapter@2.7.4(@prisma/client@6.1.0(prisma@6.1.0))':
     dependencies:
       '@auth/core': 0.37.4
-      '@prisma/client': 6.0.1(prisma@6.0.1)
+      '@prisma/client': 6.1.0(prisma@6.1.0)
     transitivePeerDependencies:
       - '@simplewebauthn/browser'
       - '@simplewebauthn/server'
@@ -2603,18 +2603,18 @@ snapshots:
       - '@simplewebauthn/server'
       - nodemailer
 
-  '@builder.io/partytown@0.10.2': {}
+  '@builder.io/partytown@0.10.3': {}
 
-  '@builder.io/qwik-city@1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))':
+  '@builder.io/qwik-city@1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))':
     dependencies:
       '@mdx-js/mdx': 3.0.1
       '@types/mdx': 2.0.13
       source-map: 0.7.4
       svgo: 3.3.2
-      undici: 7.1.1
+      undici: 7.2.0
       valibot: 0.42.1(typescript@5.7.2)
       vfile: 6.0.2
-      vite: 6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
+      vite: 6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
       vite-imagetools: 7.0.4(rollup@4.28.1)
       zod: 3.22.4
     transitivePeerDependencies:
@@ -2622,10 +2622,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@builder.io/qwik@1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))':
+  '@builder.io/qwik@1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))':
     dependencies:
       csstype: 3.1.3
-      vite: 6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
+      vite: 6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
 
   '@cloudflare/kv-asset-handler@0.3.3':
     dependencies:
@@ -2982,10 +2982,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@modular-forms/qwik@0.29.0(@builder.io/qwik-city@1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(@builder.io/qwik@1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(typescript@5.7.2)':
+  '@modular-forms/qwik@0.29.0(@builder.io/qwik-city@1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(@builder.io/qwik@1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)))(typescript@5.7.2)':
     dependencies:
-      '@builder.io/qwik': 1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
-      '@builder.io/qwik-city': 1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
+      '@builder.io/qwik': 1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
+      '@builder.io/qwik-city': 1.11.0(rollup@4.28.1)(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
       decode-formdata: 0.8.0
       valibot: 1.0.0-beta.9(typescript@5.7.2)
     transitivePeerDependencies:
@@ -3008,34 +3008,34 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@prisma/client@6.0.1(prisma@6.0.1)':
+  '@prisma/client@6.1.0(prisma@6.1.0)':
     optionalDependencies:
-      prisma: 6.0.1
+      prisma: 6.1.0
 
-  '@prisma/debug@6.0.1': {}
+  '@prisma/debug@6.1.0': {}
 
-  '@prisma/engines-version@5.23.0-27.5dbef10bdbfb579e07d35cc85fb1518d357cb99e': {}
+  '@prisma/engines-version@6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959': {}
 
-  '@prisma/engines@6.0.1':
+  '@prisma/engines@6.1.0':
     dependencies:
-      '@prisma/debug': 6.0.1
-      '@prisma/engines-version': 5.23.0-27.5dbef10bdbfb579e07d35cc85fb1518d357cb99e
-      '@prisma/fetch-engine': 6.0.1
-      '@prisma/get-platform': 6.0.1
+      '@prisma/debug': 6.1.0
+      '@prisma/engines-version': 6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959
+      '@prisma/fetch-engine': 6.1.0
+      '@prisma/get-platform': 6.1.0
 
-  '@prisma/extension-accelerate@1.2.1(@prisma/client@6.0.1(prisma@6.0.1))':
+  '@prisma/extension-accelerate@1.2.1(@prisma/client@6.1.0(prisma@6.1.0))':
     dependencies:
-      '@prisma/client': 6.0.1(prisma@6.0.1)
+      '@prisma/client': 6.1.0(prisma@6.1.0)
 
-  '@prisma/fetch-engine@6.0.1':
+  '@prisma/fetch-engine@6.1.0':
     dependencies:
-      '@prisma/debug': 6.0.1
-      '@prisma/engines-version': 5.23.0-27.5dbef10bdbfb579e07d35cc85fb1518d357cb99e
-      '@prisma/get-platform': 6.0.1
+      '@prisma/debug': 6.1.0
+      '@prisma/engines-version': 6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959
+      '@prisma/get-platform': 6.1.0
 
-  '@prisma/get-platform@6.0.1':
+  '@prisma/get-platform@6.1.0':
     dependencies:
-      '@prisma/debug': 6.0.1
+      '@prisma/debug': 6.1.0
 
   '@rollup/pluginutils@5.1.0(rollup@4.28.1)':
     dependencies:
@@ -4697,9 +4697,9 @@ snapshots:
 
   printable-characters@1.0.42: {}
 
-  prisma@6.0.1:
+  prisma@6.1.0:
     dependencies:
-      '@prisma/engines': 6.0.1
+      '@prisma/engines': 6.1.0
     optionalDependencies:
       fsevents: 2.3.3
 
@@ -4711,9 +4711,9 @@ snapshots:
 
   qwik-ionicons@1.0.5: {}
 
-  qwik-speak@0.23.0(@builder.io/qwik@1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))):
+  qwik-speak@0.23.0(@builder.io/qwik@1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))):
     dependencies:
-      '@builder.io/qwik': 1.11.0(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
+      '@builder.io/qwik': 1.11.0(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1))
 
   read-cache@1.0.0:
     dependencies:
@@ -4995,7 +4995,7 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.0.1
 
-  tailwindcss@3.4.16:
+  tailwindcss@3.4.17:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -5107,7 +5107,7 @@ snapshots:
     dependencies:
       '@fastify/busboy': 2.1.1
 
-  undici@7.1.1: {}
+  undici@7.2.0: {}
 
   unenv-nightly@1.10.0-1717606461.a117952:
     dependencies:
@@ -5199,18 +5199,18 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  vite-tsconfig-paths@5.1.4(typescript@5.7.2)(vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)):
+  vite-tsconfig-paths@5.1.4(typescript@5.7.2)(vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)):
     dependencies:
       debug: 4.3.5
       globrex: 0.1.2
       tsconfck: 3.1.0(typescript@5.7.2)
     optionalDependencies:
-      vite: 6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
+      vite: 6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@6.0.3(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1):
+  vite@6.0.5(@types/node@20.14.7)(jiti@1.21.6)(yaml@2.6.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
