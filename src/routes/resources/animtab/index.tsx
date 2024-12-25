@@ -376,7 +376,7 @@ export default component$(() => {
                 const newColors = store.colors.map(color => ({ hex: getRandomColor(), pos: color.pos }));
                 store.colors = newColors;
               }}>
-                <DiceOutline width={24} />
+                <DiceOutline width={24} class="fill-current" />
               </button>
               <button class="lum-btn lum-pad-xs w-full" disabled={store.colors.find((color, i) => color.pos != (100 / (store.colors.length - 1)) * i) ? false : true} onClick$={() => {
                 const newColors = store.colors.slice(0).map((color, i) => ({ hex: color.hex, pos: (100 / (store.colors.length - 1)) * i }));
@@ -810,7 +810,7 @@ export default component$(() => {
               <label for="formatinput">
                 {t('animtab.outputFormat@@Output Format')}
               </label>
-              <textarea class="lum-input h-32" id="formatinput" value={animtabstore.outputFormat} placeholder="birdflop" onInput$={(e, el) => { animtabstore.outputFormat = el.value; }}/>
+              <textarea class="lum-input h-32 whitespace-pre" id="formatinput" value={animtabstore.outputFormat} placeholder="birdflop" onInput$={(e, el) => { animtabstore.outputFormat = el.value; }}/>
             </div>}
           </div>
         </div>
