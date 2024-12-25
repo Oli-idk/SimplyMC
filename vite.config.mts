@@ -20,11 +20,6 @@ export default defineConfig(() => {
             }),
             partytownVite({ dest: join(__dirname, "dist", "~partytown") })
         ],
-        dev: {
-            headers: {
-                "Cache-Control": "public, max-age=0",
-            },
-        },
         preview: {
             headers: {
                 "Cache-Control": "public, max-age=600",
