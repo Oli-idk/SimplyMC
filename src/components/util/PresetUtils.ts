@@ -9,7 +9,7 @@ export interface format {
 
 export const defaultPresets = {
   savedPresets: [],
-}
+};
 
 export const presets = [
   {
