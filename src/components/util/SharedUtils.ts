@@ -1,7 +1,7 @@
 import type { Cookie } from '@builder.io/qwik-city';
 import { rgbDefaults } from '~/routes/resources/rgb';
 import { animTABDefaults } from '~/routes/resources/animtab';
-import { defaults, loadPreset } from './PresetUtils';
+import { defaults, loadPreset, defaultPresets } from './PresetUtils';
 
 type names = 'rgb' | 'animtab' | 'parsed' | 'animpreview' | 'presets';
 
@@ -17,6 +17,8 @@ export function getCookies(cookie: Cookie, preset: names, urlParams?: URLSearchP
       json = JSON.parse(decodeURIComponent(cookieVal));  // Decode the cookie value
     } else if (preset == 'rgb' || preset == 'animtab') {
       json = preset == 'rgb' ? deepclone(rgbDefaults) : deepclone(animTABDefaults);
+    } else if (preset == 'presets') {
+      json = deepclone(defaultPresets);
     } else {
       json = {};
     }

@@ -7,6 +7,10 @@ export interface format {
   strikethrough?: string;
 }
 
+export const defaultPresets = {
+  savedPresets: [],
+}
+
 export const presets = [
   {
     version: 4,
