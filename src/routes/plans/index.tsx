@@ -44,7 +44,7 @@ export const plans = {
       'Up to 80 GB NVMe Storage',
       'Free upgrade to US Premium+ after 6 months',
     ],
-    outOfStock: true,
+    outOfStock: false,
   },
   'US Premium+': {
     id: 'us-premium',
@@ -58,11 +58,11 @@ export const plans = {
     },
     features: [
       'US East (NYC / Ashburn VA)',
-      'Ryzen 9 7900X/7950X',
+      'Ryzen 9 7900X or Better',
       '6 Logical Cores',
       'Unmetered* NVMe Storage',
     ],
-    outOfStock: true,
+    outOfStock: false,
   },
 };
 
