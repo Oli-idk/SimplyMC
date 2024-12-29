@@ -1,5 +1,6 @@
 import { component$, useStore } from '@builder.io/qwik';
 import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
+import { isBrowser } from '@builder.io/qwik/build';
 import { DropdownRaw, Toggle } from '@luminescent/ui-qwik';
 import { CopyOutline, CubeOutline, SaveOutline, TrashBinOutline } from 'qwik-ionicons';
 import { inlineTranslate } from 'qwik-speak';
@@ -106,7 +107,7 @@ export default component$(() => {
                     });
                     if (existingPreset) store.savedPresets = store.savedPresets.filter((p) => p !== existingPreset);
                     else store.savedPresets.push(preset);
-                    setCookies('presets', { savedPresets: store.savedPresets });
+                    if (isBrowser) setCookies('presets', { savedPresets: store.savedPresets });
                   }}>
                     {store.savedPresets.find((p) => JSON.stringify(p) === JSON.stringify(preset)) ? <>
                       <TrashBinOutline width={20} /> Remove

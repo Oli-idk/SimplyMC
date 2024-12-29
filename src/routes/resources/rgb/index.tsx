@@ -642,7 +642,7 @@ export default component$(() => {
                             });
                             if (presetstore.savedPresets.find(p => JSON.stringify(p) === JSON.stringify(preset))) return;
                             presetstore.savedPresets.push(preset);
-                            setCookies('presets', presetstore);
+                            if (isBrowser) setCookies('presets', presetstore);
                             modalRef.value?.close();
                             const alert = {
                               class: 'text-green-500',
