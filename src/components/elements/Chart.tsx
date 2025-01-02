@@ -50,7 +50,7 @@ export default component$(() => {
               // 'rgba(0, 215, 150, 1)',
             ],
             borderWidth: 1,
-            data: [1020.81, 1997.07, 224.15, 213.16, 1176.82, null, null],
+            data: [923.75, 1780.04, 322.93, 442.68, 1595.40, null, null],
           },
           {
             // Inner Ring (REVENUE)
@@ -79,7 +79,7 @@ export default component$(() => {
               // 'rgba(0, 215, 150, 1)',
             ],
             borderWidth: 1,
-            data: [null, null, null, null, null, 6385.68, 338.09],
+            data: [null, null, null, null, null, 5993.63, 245.85],
           }],
         },
         options: {
