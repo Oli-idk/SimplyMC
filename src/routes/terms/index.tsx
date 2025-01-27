@@ -7,7 +7,7 @@ export default component$(() => {
     <section class="flex mx-auto max-w-7xl px-6 items-center justify-center min-h-svh pt-[72px]">
       <div class="my-10 space-y-3 min-h-[60px]">
         <p class="font-bold text-4xl">BIRDFLOP TERMS OF SERVICE</p>
-        <p>Last Updated: February 29, 2024</p>
+        <p>Last Updated: January 27, 2025</p>
         <p>These terms of service ("Terms") apply to your access and use of Birdflop (the "Service"). Please read them carefully.</p>
         <h1 class="font-bold text-2xl">Accepting these Terms</h1>
         <p class="pl-5">If you access or use the Service, it means you agree to be bound by all of the terms below. So, before you use the Service, please read all of the terms. If you don't agree to all of the terms below, please do not use the Service. Also, if a term does not make sense to you, please let us know by e-mailing <a href="mailto:terms@birdflop.com">terms@birdflop.com</a></p>
@@ -55,7 +55,7 @@ export default component$(() => {
         <p class="pl-5">Exceptions for many of the pages of the Service may be available on an open-source code repository. If the repository exists and contains licenses, your actions must be guided by these licenses. If the repository either does not exist or does not contain licenses, it is assumed to be unlicensed for reuse in any way.</p>
         <h1 class="font-bold text-2xl">Satisfaction Guarantee</h1>
         <p class="pl-5">We grant all hosting plans a 3-day (72-hour) refund policy, provided that the plan has not violated any of these Terms. These refunds will be issued regardless of the reason for requesting the refund. The refund will be issued to the initial form of payment.</p>
-        <p class="pl-5">Birdflop additionally provides a 99% uptime guarantee valid perpetually. If greater than 3 hours of downtime occur over the course of a client's billing cycle and lead to that client being dissatisfied with our services, the client may cancel their service and receive a full refund for the current billing cycle.</p>
+        <p class="pl-5">Birdflop additionally provides a 99% uptime guarantee valid perpetually. If greater than 3 hours of unplanned downtime occur over the course of a client's billing cycle and lead to that client being dissatisfied with our services, the client may cancel their service and receive a full refund for the current billing cycle.</p>
         <p class="pl-5">Refunds must be requested through a Discord ticket created by the verified owner of the server. Chargebacks are explicitly prohibited and constitute a violation of these terms, voiding all refund options and prohibiting the user from accessing our services.</p>
         <h1 class="font-bold text-2xl">Reimbursement Policy</h1>
         <p class="pl-5">As a nonprofit, we have made the decision to provide periodic reimbursments to clients based on excess profit from their plans. Reimbursments rates vary from period-to-period, and rates may range from 0% - 100%. Generally, reimbursements are announced and distrubuted quarterly. Clients receive reimbursements as a percentage of their external transactions from each quarter, categorized to the best of our ability into the US reimbursement rate, the EU reimbursement rate, or a combination of the two based on plans held by the client. Internal credits are not eligible for reimbursement.
