@@ -1,10 +1,11 @@
 import { component$ } from '@builder.io/qwik';
-import { Link, useLocation } from '@builder.io/qwik-city';
+import { Form, Link, useLocation } from '@builder.io/qwik-city';
 import { LogoBirdflop, LogoDiscord, Nav, DropdownRaw } from '@luminescent/ui-qwik';
 
-import { CubeOutline, GlobeOutline, LogoGithub, ServerOutline } from 'qwik-ionicons';
+import { CubeOutline, GlobeOutline, LogInOutline, LogoGithub, ServerOutline } from 'qwik-ionicons';
 
 import { inlineTranslate, useSpeakConfig } from 'qwik-speak';
+import { useSession, useSignIn, useSignOut } from '~/routes/plugin@auth';
 
 import { languages } from '~/speak-config';
 
@@ -12,6 +13,9 @@ export default component$(() => {
   const config = useSpeakConfig();
   const t = inlineTranslate();
   const loc = useLocation();
+  const signIn = useSignIn();
+  const signOut = useSignOut();
+  const session = useSession();
 
   return (
     <Nav fixed colorClass="lum-bg-gray-800/40 !border-t-0 !border-x-0">
@@ -75,6 +79,26 @@ export default component$(() => {
       <div q:slot='end' class="hidden sm:flex gap-2">
         <SocialButtons />
       </div>
+
+      <Form action={session.value ? signOut : signIn} q:slot='end' class="relative">
+        <input type="hidden" name="providerId" value="discord" />
+        <input
+          type="hidden"
+          name="options.redirectTo"
+          value={loc.url.pathname + loc.url.search}
+        />
+        <button class="lum-btn lum-bg-transparent w-full justify-end fill-current lum-pad-equal-xs">
+          {session.value && session.value.user?.image ?
+            <>
+              <div class="flex gap-3 pr-7 items-center">
+                <span>{session.value.user?.name}</span>
+                <img src={session.value.user.image} width={28} height={28} class="rounded-full" />
+              </div>
+            </>
+            : <LogInOutline width={28} />
+          }
+        </button>
+      </Form>
 
       <h3 q:slot="mobile" class="flex items-center gap-3 mx-4 py-3 text-gray-200 font-semibold border-b border-gray-700">
         <CubeOutline width={24} />Hosting

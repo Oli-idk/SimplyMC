@@ -1,15 +1,15 @@
 import type { Cookie } from '@builder.io/qwik-city';
 import { rgbDefaults } from '~/routes/resources/rgb';
 import { animTABDefaults } from '~/routes/resources/animtab';
-import { defaults, loadPreset } from './PresetUtils';
+import { defaults, loadPreset, defaultPresets } from './PresetUtils';
 
-type names = 'rgb' | 'animtab' | 'parsed' | 'animpreview';
+type names = 'rgb' | 'animtab' | 'parsed' | 'animpreview' | 'presets';
 
 function deepclone(obj: any) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-export function getCookies(cookie: Cookie, preset: names, urlParams: URLSearchParams) {
+export function getCookies(cookie: Cookie, preset: names, urlParams?: URLSearchParams) {
   let json = deepclone(defaults);
   try {
     const cookieVal = cookie.get(preset)?.value;
@@ -17,6 +17,8 @@ export function getCookies(cookie: Cookie, preset: names, urlParams: URLSearchPa
       json = JSON.parse(decodeURIComponent(cookieVal));  // Decode the cookie value
     } else if (preset == 'rgb' || preset == 'animtab') {
       json = preset == 'rgb' ? deepclone(rgbDefaults) : deepclone(animTABDefaults);
+    } else if (preset == 'presets') {
+      json = deepclone(defaultPresets);
     } else {
       json = {};
     }
@@ -24,17 +26,23 @@ export function getCookies(cookie: Cookie, preset: names, urlParams: URLSearchPa
     console.error(e);
   }
 
-  const params = Object.fromEntries([...urlParams.entries()]) as any;
-  Object.keys(params).forEach(key => {
-    try {
-      if (key == 'format' || key == 'colors') params[key] = JSON.parse(params[key]);
-      else if (params[key] === 'true' || params[key] === 'false') params[key] = params[key] === 'true';
-      else if (!isNaN(Number(params[key]))) params[key] = Number(params[key]);
-    } catch (e) {
-      console.error(e);
-    }
-  });
-  json = { ...json, ...params };
+  if (urlParams) {
+    const params = Object.fromEntries([...urlParams.entries()]) as any;
+    Object.keys(params).forEach(key => {
+      try {
+        if ((preset == 'rgb' && !Object.keys(rgbDefaults).includes(key))
+        || (preset == 'animtab' && !Object.keys(animTABDefaults).includes(key))) {
+          delete params[key];
+        }
+        if (key == 'format' || key == 'colors') params[key] = JSON.parse(params[key]);
+        else if (params[key] === 'true' || params[key] === 'false') params[key] = params[key] === 'true';
+        else if (!isNaN(Number(params[key]))) params[key] = Number(params[key]);
+      } catch (e) {
+        console.error(e);
+      }
+    });
+    json = { ...json, ...params };
+  }
 
   // migrate
   let migrated = false;

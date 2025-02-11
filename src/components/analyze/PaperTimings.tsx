@@ -13,7 +13,7 @@ export default component$(() => {
         <h1 class="font-bold text-gray-50 text-2xl sm:text-4xl mb-2">
           Paper Timings Analysis
         </h1>
-        <h2 class="text-gray-50 text-base sm:text-xl">
+        <h2 class="text-gray-50 sm:text-xl">
           These are not magic values. Many of these settings have real consequences on your server's mechanics.<br />
           See <a href="https://eternity.community/index.php/paper-optimization/" class="text-blue-400 hover:underline">this guide</a> for detailed information on the functionality of each setting.
         </h2>

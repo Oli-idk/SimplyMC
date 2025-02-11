@@ -32,7 +32,7 @@ export default component$(() => {
   return (
     <QwikCityProvider>
       <head>
-        <meta charSet="utf-8" />
+        <meta charset="utf-8" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <QwikPartytown forward={['dataLayer.push']} />
         <script

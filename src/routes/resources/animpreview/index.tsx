@@ -35,7 +35,7 @@ export default component$(() => {
   const cookies = useCookies().value;
 
   const store = useStore({
-    text: 'birdflop',
+    text: 'Birdflop',
     speed: 50,
     frames: [] as string[],
     frame: 1,
@@ -95,7 +95,7 @@ export default component$(() => {
         <h1 class="font-bold text-gray-50 text-2xl sm:text-4xl mb-2">
           {t('animpreview.title@@Animation Previewer')}
         </h1>
-        <h2 class="text-gray-50 text-base sm:text-xl mb-12">
+        <h2 class="text-gray-50 sm:text-xl mb-12">
           {t('animpreview.subtitle@@Preview TAB Animations without the need to put them ingame')}
         </h2>
 

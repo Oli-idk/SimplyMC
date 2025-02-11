@@ -152,7 +152,7 @@ export default component$(() => {
         <h1 class="font-bold text-gray-50 text-2xl sm:text-4xl mb-2">
           {t('flags.title@@Flags Generator')}
         </h1>
-        <h2 class="text-gray-50 text-base sm:text-xl mb-6">
+        <h2 class="text-gray-50 sm:text-xl mb-6">
           {t('flags.subtitle@@A simple script generator to start your Minecraft servers with optimal flags.')}
         </h2>
 

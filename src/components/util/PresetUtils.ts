@@ -7,49 +7,98 @@ export interface format {
   strikethrough?: string;
 }
 
-export const presets = {
-  'birdflop': [
-    { hex: '#084CFB', pos: 0 },
-    { hex: '#ADF3FD', pos: 100 },
-  ],
-  'SimplyMC': [
-    { hex: '#00FFE0', pos: 0 },
-    { hex: '#EB00FF', pos: 100 },
-  ],
-  'Rainbow': [
-    { hex: '#FF0000', pos: 0 },
-    { hex: '#FF7F00', pos: 16.66 },
-    { hex: '#FFFF00', pos: 33.33 },
-    { hex: '#00FF00', pos: 50 },
-    { hex: '#0000FF', pos: 66.66 },
-    { hex: '#4B0082', pos: 83.33 },
-    { hex: '#9400D3', pos: 100 },
-  ],
-  'Skyline': [
-    { hex: '#1488CC', pos: 0 },
-    { hex: '#2B32B2', pos: 100 },
-  ],
-  'Mango': [
-    { hex: '#FFE259', pos: 0 },
-    { hex: '#FFA751', pos: 100 },
-  ],
-  'Vice City': [
-    { hex: '#3494E6', pos: 0 },
-    { hex: '#EC6EAD', pos: 100 },
-  ],
-  'Dawn': [
-    { hex: '#F3904F', pos: 0 },
-    { hex: '#3B4371', pos: 100 },
-  ],
-  'Rose': [
-    { hex: '#F4C4F3', pos: 0 },
-    { hex: '#FC67FA', pos: 100 },
-  ],
-  'Firewatch': [
-    { hex: '#CB2D3E', pos: 0 },
-    { hex: '#EF473A', pos: 100 },
-  ],
+export const defaultPresets = {
+  savedPresets: [],
 };
+
+export const presets = [
+  {
+    version: 4,
+    name: 'Birdflop',
+    colors: [
+      { hex: '#084CFB', pos: 0 },
+      { hex: '#ADF3FD', pos: 100 },
+    ],
+    length: 1,
+  },
+  {
+    version: 4,
+    name: 'SimplyMC',
+    colors: [
+      { hex: '#00FFE0', pos: 0 },
+      { hex: '#EB00FF', pos: 100 },
+    ],
+    length: 1,
+  },
+  {
+    version: 4,
+    name: 'Rainbow',
+    colors: [
+      { hex: '#FF0000', pos: 0 },
+      { hex: '#FF7F00', pos: 16.66 },
+      { hex: '#FFFF00', pos: 33.33 },
+      { hex: '#00FF00', pos: 50 },
+      { hex: '#0000FF', pos: 66.66 },
+      { hex: '#4B0082', pos: 83.33 },
+      { hex: '#9400D3', pos: 100 },
+    ],
+    length: 2,
+  },
+  {
+    version: 4,
+    name: 'Skyline',
+    colors: [
+      { hex: '#1488CC', pos: 0 },
+      { hex: '#2B32B2', pos: 100 },
+    ],
+    length: 2,
+  },
+  {
+    version: 4,
+    name: 'Mango',
+    colors: [
+      { hex: '#FFE259', pos: 0 },
+      { hex: '#FFA751', pos: 100 },
+    ],
+    length: 1,
+  },
+  {
+    version: 4,
+    name: 'Vice City',
+    colors: [
+      { hex: '#3494E6', pos: 0 },
+      { hex: '#EC6EAD', pos: 100 },
+    ],
+    length: 1,
+  },
+  {
+    version: 4,
+    name: 'Dawn',
+    colors: [
+      { hex: '#F3904F', pos: 0 },
+      { hex: '#3B4371', pos: 100 },
+    ],
+    length: 1,
+  },
+  {
+    version: 4,
+    name: 'Rose',
+    colors: [
+      { hex: '#F4C4F3', pos: 0 },
+      { hex: '#FC67FA', pos: 100 },
+    ],
+    length: 1,
+  },
+  {
+    version: 4,
+    name: 'Firewatch',
+    colors: [
+      { hex: '#CB2D3E', pos: 0 },
+      { hex: '#EF473A', pos: 100 },
+    ],
+    length: 1,
+  },
+];
 
 export const v3formats = [
   {
@@ -97,10 +146,10 @@ export const types = [
 
 export const defaults = {
   version: 4,
-  colors: presets.birdflop,
+  colors: presets[0].colors,
   colorlength: 1,
   name: 'logo',
-  text: 'birdflop',
+  text: 'Birdflop',
   type: 1,
   speed: 50,
   length: 1,

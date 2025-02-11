@@ -13,7 +13,7 @@
     "formatCharacter": "서식 문자",
     "formatting": "서식",
     "hexColor": "헥스 색상",
-    "import": "가져오기 (여기에 붙여넣기)",
+    "import": "가져오기",
     "importedPreset": "프리셋을 성공적으로 가져왔습니다!",
     "inputText": "입력 텍스트",
     "invalidPreset": "INVALID PRESET! Please report this to the <a class=\"text-blue-400 hover:underline\" href=\"https://discord.gg/9vUZ9MREVz\">Developers</a> with the preset you tried to import.",

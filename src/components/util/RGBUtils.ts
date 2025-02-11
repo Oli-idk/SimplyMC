@@ -44,10 +44,10 @@ export function getRandomColor() {
 }
 
 export function getAnimFrames(store: typeof defaults) {
+  if (store.colors.length < 2) return { OutputArray: [], frames: [] };
   const colors = store.colors.map(color => ({ rgb: convertToRGB(color.hex), pos: color.pos }));
-  if (colors.length < 2) return { OutputArray: [], frames: [] };
 
-  const text = store.text ?? 'birdflop';
+  const text = store.text ?? 'Birdflop';
   let loopAmount;
   const length = text.length * store.length / store.colorlength;
   switch (Number(store.type)) {
@@ -66,7 +66,28 @@ export function getAnimFrames(store: typeof defaults) {
     const gradient = new AnimatedGradient(colors, length, n);
     let output = '';
     gradient.next();
-    if (store.type == 4) {
+    if (store.format.color == 'MiniMessage') {
+      const colors = sortColors(store.colors);
+      if (colors[0].pos !== 0) colors.unshift({ hex: colors[0].hex, pos: 0 });
+      if (colors[colors.length - 1].pos !== 100) colors.push({ hex: colors[colors.length - 1].hex, pos: 100 });
+      for (let i = 0; i < colors.length - 1; i++) {
+        let currentColor = colors[i];
+        let nextColor = colors[i + 1];
+        if (currentColor.pos > nextColor.pos) {
+          const newColor = currentColor;
+          currentColor = nextColor;
+          nextColor = newColor;
+        }
+
+        const numSteps = text.length;
+        const lowerRange = Math.round(colors[i].pos / 100 * numSteps);
+        const upperRange = Math.round(colors[i + 1].pos / 100 * numSteps);
+        if (lowerRange === upperRange) continue;
+        output += `<gradient:${currentColor.hex}:${nextColor.hex}>${text.substring(lowerRange, upperRange)}</gradient>`;
+      }
+      OutputArray.push(output);
+    }
+    else if (store.type == 4) {
       const hex = convertToHex(gradient.next());
       clrs.push(hex);
       let hexOutput = store.format.color;
