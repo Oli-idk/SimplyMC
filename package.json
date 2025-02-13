@@ -8,7 +8,7 @@
     "url": "git+https://github.com/birdflop/web.git"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.14.0"
   },
   "author": "LuminescentDev",
   "license": "AGPL-3.0-or-later",
