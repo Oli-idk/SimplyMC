@@ -27,11 +27,11 @@ importers:
         specifier: 1.12.0
         version: 1.12.0(acorn@8.14.0)(rollup@4.34.6)(typescript@5.7.3)(vite@5.4.14(@types/node@22.13.1)(lightningcss@1.29.1))
       '@luminescent/ui':
-        specifier: 1.4.4
-        version: 1.4.4
+        specifier: 1.4.6-0
+        version: 1.4.6-0
       '@luminescent/ui-qwik':
-        specifier: ^1.4.4
-        version: 1.4.4(@luminescent/ui@1.4.4)
+        specifier: ^1.4.6-0
+        version: 1.4.6-0(@luminescent/ui@1.4.6-0)
       '@modular-forms/qwik':
         specifier: ^0.29.0
         version: 0.29.0(@builder.io/qwik-city@1.12.0(acorn@8.14.0)(rollup@4.34.6)(typescript@5.7.3)(vite@5.4.14(@types/node@22.13.1)(lightningcss@1.29.1)))(@builder.io/qwik@1.12.0(vite@5.4.14(@types/node@22.13.1)(lightningcss@1.29.1)))(typescript@5.7.3)
@@ -621,14 +621,14 @@ packages:
   '@kurkle/color@0.3.4':
     resolution: {integrity: sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w==}
 
-  '@luminescent/ui-qwik@1.4.4':
-    resolution: {integrity: sha512-Er3TxFnZztN7F38d9ygORQvinixEEKViGnBTqXvZprFH/HdegIs0SaOhqgkO3hHGMOy1g7P8omJUTI3NZaNvSg==}
+  '@luminescent/ui-qwik@1.4.6-0':
+    resolution: {integrity: sha512-KFX68JklJvZOYC8HbYsQU9Fad4M6kX+9sQ0a4/vFiysJnM8OA0SSLIu8YdLDeildUsug4TR/P6cOR7MnEe5s+w==}
     engines: {node: '>=15.0.0'}
     peerDependencies:
       '@luminescent/ui': ^1.4.3
 
-  '@luminescent/ui@1.4.4':
-    resolution: {integrity: sha512-5zmp0j3gZBifB80DwlGdoqPbeClKhZgP7TXpQB9Y0ZPeWLEfmEHZasz+uhUbfcvzGBdqc+p1rzo6SXg/I7eOpA==}
+  '@luminescent/ui@1.4.6-0':
+    resolution: {integrity: sha512-POqZEaQBxbpnMzveDSeQIIB9PlpY2BnjRryBw0TW39dJwieZyp00qHpARz946Cvf19a5tZlULzlSRr3tW+h2zQ==}
     engines: {node: '>=15.0.0'}
 
   '@mdx-js/mdx@3.1.0':
@@ -2893,11 +2893,11 @@ snapshots:
 
   '@kurkle/color@0.3.4': {}
 
-  '@luminescent/ui-qwik@1.4.4(@luminescent/ui@1.4.4)':
+  '@luminescent/ui-qwik@1.4.6-0(@luminescent/ui@1.4.6-0)':
     dependencies:
-      '@luminescent/ui': 1.4.4
+      '@luminescent/ui': 1.4.6-0
 
-  '@luminescent/ui@1.4.4': {}
+  '@luminescent/ui@1.4.6-0': {}
 
   '@mdx-js/mdx@3.1.0(acorn@8.14.0)':
     dependencies:
