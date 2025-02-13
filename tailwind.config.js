@@ -14,8 +14,4 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@luminescent/ui'),
-    require('@anuragroy/tailwindcss-animate'),
-  ],
 };

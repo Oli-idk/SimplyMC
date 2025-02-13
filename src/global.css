@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "@luminescent/ui";
+@plugin "@anuragroy/tailwindcss-animate";
+@config "../tailwind.config.js";
 
 /* fonts from https://github.com/IdreesInc/Monocraft */
 
