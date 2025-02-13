@@ -23,7 +23,7 @@ const sharedFlags: SharedFlags = {
 };
 
 const sharedExtraFlags: SharedFlags<AvailableExtraFlags> = {
-  'bukkit': ['benchmarkedGraalVM'],
+  'bukkit': ['benchmarkedGraalVM', 'meowiceGraalVM'],
 };
 
 export const serverType: EnvironmentOptions<ServerTypeOption> = {

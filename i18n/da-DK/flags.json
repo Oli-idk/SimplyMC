@@ -39,12 +39,16 @@
       }
     },
     "extraFlags": {
+      "label": "Extra Flags",
+      "description": "Additional flags that may improve performance or change functionality.",
       "benchmarkedGraalVM": {
         "description": "Additional performance flags for Benchmarked (G1GC) exclusive to GraalVM users.",
         "label": "Benchmarked (GraalVM)"
       },
-      "description": "Additional flags that may improve performance or change functionality.",
-      "label": "Extra Flags",
+      "meowiceGraalVM": {
+        "description": "Additional performance flags for MeowIce's Flags exclusive to GraalVM users.",
+        "label": "MeowIce's Flags (GraalVM)"
+      },
       "vectors": {
         "description": "Enables SIMD operations to optimize map item rendering on Pufferfish and its forks.",
         "label": "Modern Vectors"

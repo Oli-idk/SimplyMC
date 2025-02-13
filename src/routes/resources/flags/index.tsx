@@ -13,6 +13,7 @@ import { isBrowser } from '@builder.io/qwik/build';
 const flagTypes = {
   'none': 'none',
   'aikars': 'Aikar\'s Flags',
+  'meowice': 'MeowIce\'s Flags',
   'benchmarkedG1GC': 'Benchmarked (G1GC)',
   'benchmarkedZGC': 'Benchmarked (ZGC)',
   'benchmarkedShenandoah': 'Benchmarked (Shenandoah)',
@@ -131,6 +132,12 @@ export default component$(() => {
       </>,
       description: t('flags.extraFlags.benchmarkedGraalVM.description@@Additional performance flags for Benchmarked (G1GC) exclusive to GraalVM users.'),
     },
+    meowiceGraalVM: {
+      label: <>
+        <CubeOutline class="w-6 h-6" /> {t('flags.extraFlags.meowiceGraalVM.label@@MeowIce\'s Flags (GraalVM)')}
+      </>,
+      description: t('flags.extraFlags.meowiceGraalVM.description@@Additional performance flags for MeowIce\'s Flags exclusive to GraalVM users.'),
+    },
   };
 
   const cookies = useCookies().value;
@@ -226,6 +233,9 @@ export default component$(() => {
               }} display={<><HelpOutline width={24}/></>}>
                 <a class="lum-btn lum-bg-transparent" q:slot='extra-buttons' href="https://docs.papermc.io/paper/aikars-flags" target="_blank">
                   Aikar's Flags
+                </a>
+                <a class="lum-btn lum-bg-transparent" q:slot='extra-buttons' href="https://github.com/MeowIce/meowice-flags" target="_blank">
+                  MeowIce's Flags
                 </a>
                 <a class="lum-btn lum-bg-transparent" href="https://github.com/brucethemoose/Minecraft-Performance-Flags-Benchmarks" target="_blank">
                   Benchmarked Flags
