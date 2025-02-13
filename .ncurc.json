@@ -1,6 +1,11 @@
 {
   "reject": [
     "eslint",
-    "@types/eslint"
-  ]
+    "@types/eslint",
+    "vite"
+  ],
+  "notes": {
+    "eslint": "new major version which idk how to fix yet with qwik",
+    "vite": "building broken on v6"
+  }
 }
