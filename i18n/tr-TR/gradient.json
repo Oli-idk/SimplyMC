@@ -1,8 +1,8 @@
 {
   "gradient": {
-    "prefix": "Prefix (Usually used for commands)",
-    "prefixPlaceholder": "example: '/nick '",
-    "subtitle": "Powered by Birdflop, a 501(c)(3) nonprofit Minecraft host.",
-    "title": "RGBirdflop"
+    "prefix": "Önek (Genellikle komutlar için kullanılır)",
+    "prefixPlaceholder": "örnek: '/nick'",
+    "subtitle": "501(c)(3) kar amacı gütmeyen bir Minecraft sunucusu olan Birdflop tarafından desteklenmektedir.",
+    "title": "RGBBirdflop"
   }
 }

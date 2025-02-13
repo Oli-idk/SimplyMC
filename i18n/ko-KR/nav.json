@@ -1,18 +1,16 @@
 {
   "nav": {
-    "analysis": "분석",
-    "animatedTAB": "애니메이션 탭",
-    "animatedTextures": "애니메이션 텍스처",
-    "colorCodeStripper": "색상 코드 제거기",
-    "flags": "플래그",
-    "gradients": "그라디언트",
-    "hexGradient": "헥스 그라디언트",
-    "misc": "기타",
+    "animatedTAB": "Animated TAB",
+    "animatedTextures": "Animated Textures",
+    "colorCodeStripper": "Color Code Stripper",
+    "flags": "Flags",
+    "hexGradient": "RGBirdflop",
     "more": "More Resources",
     "paperTimings": "Paper Timings",
-    "privacyPolicy": "개인정보 처리방침",
+    "privacyPolicy": "Privacy Policy",
     "sparkProfile": "Spark Profile",
     "tabAnimationPreview": "TAB Animation Previewer",
-    "tabAnimationPreviewer": "탭 애니메이션 미리 보기"
+    "tabAnimationPreviewer": "TAB Animation Previewer",
+    "termsofService": "Terms of Service"
   }
 }

@@ -2,7 +2,7 @@
   "gradient": {
     "prefix": "접두사 (일반적으로 명령어에 사용됨)",
     "prefixPlaceholder": "예: '/nick '",
-    "subtitle": "헥스 코드 색상 그라데이션 생성기",
-    "title": "헥스 코드 그라데이션"
+    "subtitle": "Powered by Birdflop, a 501(c)(3) nonprofit Minecraft host.",
+    "title": "RGBirdflop"
   }
 }

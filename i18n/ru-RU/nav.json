@@ -1,18 +1,16 @@
 {
   "nav": {
-    "analysis": "Анализ",
     "animatedTAB": "Анимация TAB",
     "animatedTextures": "Анимация текстур",
     "colorCodeStripper": "Декомпилятор цветового кода",
-    "flags": "Стартер",
-    "gradients": "Градиенты",
-    "hexGradient": "Градиент",
-    "misc": "Разное",
-    "more": "More Resources",
+    "flags": "Стартер (Флаги)",
+    "hexGradient": "RGBirdflop",
+    "more": "Доп. ресурсы",
     "paperTimings": "Paper Timings",
-    "privacyPolicy": "Политика",
-    "sparkProfile": "Spark профиль",
-    "tabAnimationPreview": "TAB Animation Previewer",
-    "tabAnimationPreviewer": "Предпросмотр анимации TAB"
+    "privacyPolicy": "Политика конфиденциальности",
+    "sparkProfile": "Spark Profile",
+    "tabAnimationPreview": "Предпросмотр анимации TAB",
+    "tabAnimationPreviewer": "Предпросмотр анимации TAB",
+    "termsofService": "Пользовательское Соглашение"
   }
 }

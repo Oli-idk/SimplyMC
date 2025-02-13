@@ -1,11 +1,11 @@
 {
   "animtab": {
-    "animationName": "Animation Name",
-    "length": "Gradient Length",
-    "outputFormat": "Output Format",
-    "outputType": "Output Type",
-    "speed": "Speed",
-    "subtitle": "TAB plugin gradient animation creator",
-    "title": "Animated TAB"
+    "animationName": "Animasyon Adı",
+    "length": "Gradyant Uzunluğu",
+    "outputFormat": "Çıktı Formatı",
+    "outputType": "Çıkış Tipi",
+    "speed": "Hız",
+    "subtitle": "TAB eklentisi degrade animasyon oluşturucu",
+    "title": "Animasyonlu TAB"
   }
 }

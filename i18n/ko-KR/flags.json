@@ -96,7 +96,7 @@
     },
     "gui": {
       "description": "내장된 서버 관리 GUI를 표시할지 여부",
-      "label": "GUI 사용"
+      "label": "No GUI"
     },
     "memory": {
       "description": "서버에 할당할 메모리 (RAM) 양",

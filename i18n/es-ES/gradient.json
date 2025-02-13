@@ -2,7 +2,7 @@
   "gradient": {
     "prefix": "Prefijo (generalmente usado para comandos)",
     "prefixPlaceholder": "ejemplo: '/nick '",
-    "subtitle": "Creador de degradados de color hex",
-    "title": "Degradado Hex"
+    "subtitle": "Powered by Birdflop, a 501(c)(3) nonprofit Minecraft host.",
+    "title": "RGBirdflop"
   }
 }

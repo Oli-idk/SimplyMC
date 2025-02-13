@@ -1,151 +1,151 @@
 {
   "flags": {
     "autoRestart": {
-      "description": "Whether to automatically restart after it is stopped.",
-      "label": "Auto-restart"
+      "description": "Durdurulduktan sonra otomatik olarak yeniden başlatılıp başlatılmayacağı.",
+      "label": "Otomatik-Restart"
     },
     "config": {
-      "description": "The various additions and modifications that can be made to your start script.",
-      "label": "Config"
+      "description": "Başlangıç betiğinizde yapılabilecek çeşitli eklemeler ve değişiklikler.",
+      "label": "Konfigürasyon"
     },
     "enviroments": {
-      "description": "The operating system that the server runs on."
+      "description": "Sunucunun üzerinde çalıştığı işletim sistemi."
     },
     "environment": {
-      "label": "Environment"
+      "label": "Ortam"
     },
     "environments": {
       "command": {
-        "description": "Only the java command required to start the server",
-        "label": "Command"
+        "description": "Yalnızca sunucuyu başlatmak için gereken java komutu",
+        "label": "Komut"
       },
-      "description": "The operating system that the server runs on.",
-      "label": "Operating System",
+      "description": "Sunucunun üzerinde çalıştığı işletim sistemi.",
+      "label": "İşletim Sistemi",
       "linux": {
-        "description": "The most common operating system used for servers",
+        "description": "Sunucular için kullanılan en yaygın işletim sistemi",
         "label": "Linux"
       },
       "macos": {
-        "description": "Apple's operating system",
-        "label": "macOS"
+        "description": "Apple'ın işletim sistemi",
+        "label": "macOs"
       },
       "pterodactyl": {
-        "description": "Web-based server management platform used by most hosts",
+        "description": "Çoğu Hosting tarafından kullanılan web tabanlı sunucu yönetim platformu",
         "label": "Pterodactyl"
       },
       "windows": {
-        "description": "The most common operating system used for home desktops",
+        "description": "Ev tipi masaüstü bilgisayarlar için kullanılan en yaygın işletim sistemi",
         "label": "Windows"
       }
     },
     "extraFlags": {
       "benchmarkedGraalVM": {
-        "description": "Additional performance flags for Benchmarked (G1GC) exclusive to GraalVM users.",
-        "label": "Benchmarked (GraalVM)"
+        "description": "GraalVM kullanıcılarına özel Benchmarked (G1GC) için ek performans bayrakları.",
+        "label": "Karşılaştırılmış (GraalVM)"
       },
-      "description": "Additional flags that may improve performance or change functionality.",
-      "label": "Extra Flags",
+      "description": "Performansı artırabilecek veya işlevselliği değiştirebilecek ek bayraklar.",
+      "label": "Ekstra Bayraklar",
       "vectors": {
-        "description": "Enables SIMD operations to optimize map item rendering on Pufferfish and its forks.",
-        "label": "Modern Vectors"
+        "description": "Pufferfish ve forklarında harita öğesi oluşturmayı optimize etmek için SIMD işlemlerini etkinleştirir.",
+        "label": "Modern Vektörler"
       }
     },
     "fileName": {
-      "description": "The name of the file that will be used to start your server.",
-      "label": "File Name"
+      "description": "Sunucunuzu başlatmak için kullanılacak dosyanın adı.",
+      "label": "Dosya Adı"
     },
     "flags": {
       "aikars": {
-        "description": "The classic and reliable flags for boosting your server's performance.",
-        "label": "Aikar's Flags"
+        "description": "Sunucunuzun performansını artırmak için klasik ve güvenilir bayraklar.",
+        "label": "Aikar'ın Bayrakları"
       },
       "benchmarkedG1GC": {
-        "description": "Performance flags backed by benchmarks. Uses G1GC, similar to Aikar's flags.",
-        "label": "Benchmarked (G1GC)"
+        "description": "Kıyaslamalarla desteklenen performans bayrakları. Aikar'ın bayraklarına benzer şekilde G1GC kullanır.",
+        "label": "Karşılaştırılmış (G1GC)"
       },
       "benchmarkedShenandoah": {
-        "description": "Performance flags backed by benchmarks. Uses Shenandoah, similar to hilltty's flags.",
-        "label": "Benchmarked (Shenandoah)"
+        "description": "Karşılaştırmalarla desteklenen performans bayrakları. Hilltty'nin bayraklarına benzer şekilde Shenandoah kullanır.",
+        "label": "Karşılaştırılmış (Shenandoah)"
       },
       "benchmarkedZGC": {
-        "description": "Performance flags backed by benchmarks. Uses ZGC, which is quite unreliable between different systems.",
-        "label": "Benchmarked (ZGC)"
+        "description": "Performans işaretleri kıyaslamalarla desteklenmektedir. Farklı sistemler arasında oldukça güvenilmez olan ZGC kullanır.",
+        "label": "Karşılaştırılmış (ZGC)"
       },
-      "description": "The collection of start arguments that typically optimize the server's performance.",
+      "description": "Genellikle sunucunun performansını optimize eden başlangıç argümanları koleksiyonu.",
       "etils": {
-        "description": "Experimental and archived performance flags based on Aikar's Flags, exclusive to Linux users.",
-        "label": "Etil's Flags"
+        "description": "Linux kullanıcılarına özel, Aikar'ın Bayraklarını temel alan deneysel ve arşivlenmiş performans bayrakları.",
+        "label": "Etil'in Bayrakları"
       },
       "hillttys": {
-        "description": "Experimental performance flags based on Shenandoah GC. May require additional setup.",
-        "label": "hilltty's Flags"
+        "description": "Shenandoah GC'ye dayalı deneysel performans işaretleri. Ek kurulum gerektirebilir.",
+        "label": "hilltty'nin Bayrakları"
       },
-      "label": "Flags",
+      "label": "Bayraklar",
       "none": {
-        "description": "A blank slate for your server.",
-        "label": "None"
+        "description": "Sunucunuz için boş bir sayfa.",
+        "label": "Hiç biri"
       },
       "obyduxs": {
-        "description": "Experimental performance flags based on Etil's Flags and Benchmarked (G1GC), exclusive to Linux users. May require additional setup.",
-        "label": "Obydux's Flags"
+        "description": "Linux kullanıcılarına özel Etil's Flags and Benchmarked (G1GC) tabanlı deneysel performans bayrakları. Ek kurulum gerektirebilir.",
+        "label": "Obydux'un Bayrakları"
       },
       "proxy": {
-        "description": "Generic performance flags for most proxy server software.",
+        "description": "Çoğu proxy sunucu yazılımı için genel performans işaretleri.",
         "label": "Proxy"
       }
     },
     "gui": {
-      "description": "Whether to display the built-in server management GUI.",
-      "label": "No GUI"
+      "description": "Yerleşik sunucu yönetimi GUI'sinin görüntülenip görüntülenmeyeceği.",
+      "label": "GUISiz"
     },
     "memory": {
-      "description": "The amount of memory (RAM) to allocate to your server.",
-      "label": "Memory",
+      "description": "Sunucunuza ayrılacak bellek (RAM) miktarı.",
+      "label": "Bellek",
       "warning": {
-        "high": "It's recommended to decrease the amount of memory allocated to the server.",
-        "low": "It's recommended to increase the amount of memory allocated to the server."
+        "high": "Sunucuya ayrılan bellek miktarının azaltılması önerilir.",
+        "low": "Sunucuya ayrılan bellek miktarının artırılması önerilir."
       }
     },
-    "result": "Result",
+    "result": "Sonuç",
     "script": {
-      "description": "The resulting script that can be used to start your server. Place this file in the same location as {{fileName}}, then execute it!",
-      "label": "Script"
+      "description": "Sunucunuzu başlatmak için kullanılabilecek sonuç betiği. Bu dosyayı {{fileName}} ile aynı konuma yerleştirin, ardından çalıştırın!",
+      "label": "Komut Dosyası"
     },
     "serverType": {
       "fabric": {
-        "description": "Better mod loader",
+        "description": "Daha iyi mod yükleyici",
         "label": "Fabric"
       },
       "forge": {
-        "description": "Mod loader",
+        "description": "Mod yükleyicisi",
         "label": "Forge"
       },
       "paper": {
-        "description": "Bukkit-based plugin loader",
+        "description": "Bukkit tabanlı eklenti yükleyici",
         "label": "Paper"
       },
       "purpur": {
-        "description": "Bukkit-based plugin loader but more",
+        "description": "Bukkit tabanlı eklenti yükleyici ama daha fazlası",
         "label": "Purpur"
       },
       "velocity": {
-        "description": "Proxy with plugin loader",
+        "description": "Eklenti yükleyicili Proxy",
         "label": "Velocity"
       },
       "waterfall": {
-        "description": "Deprecated Proxy",
+        "description": "Kullanımdan Kaldırılmış Proxy",
         "label": "Waterfall"
       }
     },
     "software": {
-      "description": "The software in which your Minecraft server will run on.",
-      "label": "Software"
+      "description": "Minecraft sunucunuzun üzerinde çalışacağı yazılım.",
+      "label": "Yazılım"
     },
-    "subtitle": "A simple script generator to start your Minecraft servers with optimal flags.",
-    "title": "Flags Generator",
+    "subtitle": "Minecraft sunucularınızı en uygun bayraklarla başlatmak için basit bir komut dosyası oluşturucu.",
+    "title": "Bayrak Oluşturucusu",
     "variables": {
-      "description": "Whether to use environment variables within the script to define memory, file name, and other commonly changed elements.",
-      "label": "Use Variables"
+      "description": "Bellek, dosya adı ve yaygın olarak değiştirilen diğer öğeleri tanımlamak için kod içinde ortam değişkenlerinin kullanılıp kullanılmayacağı.",
+      "label": "Değişkenleri Kullanın"
     }
   }
 }
