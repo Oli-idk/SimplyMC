@@ -2,7 +2,7 @@
   "gradient": {
     "prefix": "Префикс (обычно используется для команд)",
     "prefixPlaceholder": "пример: '/nick '",
-    "subtitle": "Создатель HEX градиента",
-    "title": "Hex градиент"
+    "subtitle": "На основе Birdflop, 501(c)(3) некоммерческого хостинга Minecraft.",
+    "title": "RGBirdflop"
   }
 }

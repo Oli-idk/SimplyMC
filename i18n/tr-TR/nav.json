@@ -1,18 +1,16 @@
 {
   "nav": {
-    "analysis": "Analysis",
-    "animatedTAB": "Animated TAB",
-    "animatedTextures": "Animated Textures",
-    "colorCodeStripper": "Color Code Stripper",
-    "flags": "Flags",
-    "gradients": "Gradients",
+    "animatedTAB": "Animasyonlu TAB",
+    "animatedTextures": "Animasyonlu Dokular",
+    "colorCodeStripper": "Renk Kodu Ayırıcı",
+    "flags": "Bayraklar",
     "hexGradient": "RGBirdflop",
-    "misc": "Misc",
-    "more": "More Resources",
-    "paperTimings": "Paper Timings",
-    "privacyPolicy": "Privacy Policy",
-    "sparkProfile": "Spark Profile",
-    "tabAnimationPreview": "TAB Animation Previewer",
-    "tabAnimationPreviewer": "TAB Animation Previewer"
+    "more": "Daha Fazla Kaynak",
+    "paperTimings": "Paper Zamanlamaları",
+    "privacyPolicy": "Gizlilik Politikası",
+    "sparkProfile": "Spark Profili",
+    "tabAnimationPreview": "TAB Animasyon Önizleyicisi",
+    "tabAnimationPreviewer": "TAB Animasyon Önizleyicisi",
+    "termsofService": "Hizmet Koşulları"
   }
 }

@@ -9,10 +9,10 @@
       "label": "Конфигурация"
     },
     "enviroments": {
-      "description": "The operating system that the server runs on."
+      "description": "Операционная система, на которой работает сервер."
     },
     "environment": {
-      "label": "Environment"
+      "label": "Операционная система (ОС)"
     },
     "environments": {
       "command": {
@@ -44,7 +44,7 @@
         "label": "Benchmarked (GraalVM)"
       },
       "description": "Дополнительные флаги, которые могут улучшить производительность или изменить функциональность.",
-      "label": "Extra Flags",
+      "label": "Дополнительные флаги",
       "vectors": {
         "description": "Включает SIMD операции для оптимизации отображения карты на Pufferfish и ее форки.",
         "label": "Modern Vectors"
@@ -96,7 +96,7 @@
     },
     "gui": {
       "description": "Отображать встроенный интерфейс управления сервером.",
-      "label": "Использовать GUI"
+      "label": "Без GUI"
     },
     "memory": {
       "description": "Размер памяти (ОЗУ) для выделения на ваш сервер.",

@@ -9,7 +9,7 @@
       "label": "配置"
     },
     "enviroments": {
-      "description": "服务器运行的操作系统。"
+      "description": "服务器运行的操作系统."
     },
     "environment": {
       "label": "环境"
@@ -96,7 +96,7 @@
     },
     "gui": {
       "description": "是否显示内置的服务器管理GUI。",
-      "label": "使用GUI"
+      "label": "禁用GUI"
     },
     "memory": {
       "description": "分配给服务器的内存（RAM）量。",

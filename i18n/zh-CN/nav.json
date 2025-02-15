@@ -1,18 +1,16 @@
 {
   "nav": {
-    "analysis": "分析",
     "animatedTAB": "TAB动画",
     "animatedTextures": "动画纹理",
     "colorCodeStripper": "颜色代码去除器",
     "flags": "标志",
-    "gradients": "渐变",
-    "hexGradient": "十六进制渐变",
-    "misc": "其他",
+    "hexGradient": "RGBirdflop",
     "more": "更多资源",
     "paperTimings": "Paper计时",
     "privacyPolicy": "隐私政策",
     "sparkProfile": "Spark分析",
     "tabAnimationPreview": "TAB动画预览器",
-    "tabAnimationPreviewer": "TAB动画预览器"
+    "tabAnimationPreviewer": "TAB动画预览器",
+    "termsofService": "服务条款"
   }
 }

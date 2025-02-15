@@ -1,18 +1,16 @@
 {
   "nav": {
-    "analysis": "Analysis",
     "animatedTAB": "Animated TAB",
     "animatedTextures": "Animated Textures",
     "colorCodeStripper": "Color Code Stripper",
     "flags": "Flags",
-    "gradients": "Gradients",
     "hexGradient": "RGBirdflop",
-    "misc": "Misc",
     "more": "More Resources",
     "paperTimings": "Paper Timings",
     "privacyPolicy": "Privacy Policy",
     "sparkProfile": "Spark Profile",
     "tabAnimationPreview": "TAB Animation Previewer",
-    "tabAnimationPreviewer": "TAB Animation Previewer"
+    "tabAnimationPreviewer": "TAB Animation Previewer",
+    "termsofService": "Terms of Service"
   }
 }
