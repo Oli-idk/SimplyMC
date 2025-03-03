@@ -8,6 +8,7 @@ import { Link } from '@builder.io/qwik-city';
 export default component$(() => {
   const store = useStore({
     cookies: 'true',
+    shouldShowConsent: false,
   });
 
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -17,13 +18,37 @@ export default component$(() => {
       const [key, val] = c.trim().split('=').map(decodeURIComponent);
       return Object.assign(res, { [key]: val });
     }, {});
-    if (!cookieJSON['cookies']) store.cookies = 'false';
+
+    if (!cookieJSON['cookies']) {
+      store.cookies = 'false';
+
+      try {
+        // Fetch user's location information
+        const response = await fetch('https://ipapi.co/json/');
+        const locationData = await response.json();
+
+        // Check if user is from California or EU
+        const isCaliforniaUser = locationData.region_code === 'CA' && locationData.country_code === 'US';
+        const isEUUser = [
+          'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR',
+          'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL',
+          'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB',
+        ].includes(locationData.country_code);
+
+        // Only show consent popup for California or EU users
+        store.shouldShowConsent = isCaliforniaUser || isEUUser;
+      } catch (error) {
+        console.error('Error determining user location:', error);
+        // Fallback to showing consent for everyone if geolocation fails
+        store.shouldShowConsent = true;
+      }
+    }
   });
 
   return <>
     <Nav />
     <Slot />
-    {store.cookies != 'true' &&
+    {store.cookies != 'true' && store.shouldShowConsent &&
       <div class={{
         'fixed bottom-0 sm:bottom-4 w-svw sm:w-auto sm:right-4 backdrop-blur-xl z-[1000] animate-in fade-in slide-in-from-bottom-8 anim-duration-1000 lum-card lum-bg-gray-900/60': true,
       }} id="cookieprompt">
